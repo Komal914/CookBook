@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		4B6C05562633D7F200D53F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C05552633D7F200D53F83 /* AppDelegate.swift */; };
 		4B6C05582633D7F200D53F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C05572633D7F200D53F83 /* SceneDelegate.swift */; };
-		4B6C055A2633D7F200D53F83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C05592633D7F200D53F83 /* ViewController.swift */; };
 		4B6C055D2633D7F200D53F83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C055B2633D7F200D53F83 /* Main.storyboard */; };
 		4B6C05602633D7F200D53F83 /* CookBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C055E2633D7F200D53F83 /* CookBook.xcdatamodeld */; };
 		4B6C05622633D7F700D53F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C05612633D7F700D53F83 /* Assets.xcassets */; };
 		4B6C05652633D7F700D53F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C05632633D7F700D53F83 /* LaunchScreen.storyboard */; };
+		4B6C05732633E1C400D53F83 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C05722633E1C400D53F83 /* SearchViewController.swift */; };
+		4B6C05762633E20300D53F83 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C05752633E20300D53F83 /* FavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B6C05522633D7F200D53F83 /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C05552633D7F200D53F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6C05572633D7F200D53F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4B6C05592633D7F200D53F83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B6C055C2633D7F200D53F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B6C055F2633D7F200D53F83 /* CookBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CookBook.xcdatamodel; sourceTree = "<group>"; };
 		4B6C05612633D7F700D53F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B6C05642633D7F700D53F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B6C05662633D7F700D53F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B6C05722633E1C400D53F83 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4B6C05752633E20300D53F83 /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,13 @@
 			children = (
 				4B6C05552633D7F200D53F83 /* AppDelegate.swift */,
 				4B6C05572633D7F200D53F83 /* SceneDelegate.swift */,
-				4B6C05592633D7F200D53F83 /* ViewController.swift */,
 				4B6C055B2633D7F200D53F83 /* Main.storyboard */,
 				4B6C05612633D7F700D53F83 /* Assets.xcassets */,
 				4B6C05632633D7F700D53F83 /* LaunchScreen.storyboard */,
 				4B6C05662633D7F700D53F83 /* Info.plist */,
 				4B6C055E2633D7F200D53F83 /* CookBook.xcdatamodeld */,
+				4B6C05722633E1C400D53F83 /* SearchViewController.swift */,
+				4B6C05752633E20300D53F83 /* FavViewController.swift */,
 			);
 			path = CookBook;
 			sourceTree = "<group>";
@@ -141,8 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6C05602633D7F200D53F83 /* CookBook.xcdatamodeld in Sources */,
-				4B6C055A2633D7F200D53F83 /* ViewController.swift in Sources */,
 				4B6C05562633D7F200D53F83 /* AppDelegate.swift in Sources */,
+				4B6C05732633E1C400D53F83 /* SearchViewController.swift in Sources */,
+				4B6C05762633E20300D53F83 /* FavViewController.swift in Sources */,
 				4B6C05582633D7F200D53F83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
