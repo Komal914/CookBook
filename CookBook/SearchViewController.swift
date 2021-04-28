@@ -20,6 +20,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
 
         print ("Hello")
+        
+        //********************************-API Request-***********************************
         let url = URL(string: "https://api.spoonacular.com/recipes/complexSearch?apiKey=15e74b8e65dc48a5ad0e694961d81aff")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -33,16 +35,13 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 
                 self.recipes = dataDictionary["results"] as! [[String: Any] ] //api info downloaded
                 self.tableView.reloadData() //refresh data inside tableview (calls my funcs again and again)
-                print(dataDictionary)
-
-                    // TODO: Get the array of recipes
-                    // TODO: Store the recipe in a property to use elsewhere
-                    // TODO: Reload your table view data
+                print(dataDictionary) //prints my api data
 
              }
         }
         task.resume()
     }
+    //********************************-TableView-***********************************
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
@@ -62,9 +61,30 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         let imageUrl = URL(string: imagePath)
         cell.posterView?.af_setImage(withURL: imageUrl!)
         
-        
-       
         return cell
+    }
+    //********************************-SegueToRecipeDetails-***********************************
+  
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        
+        //find the selected recipe
+        let cell = sender as! UITableViewCell //cell tapped on
+        let indexPath = tableView.indexPath(for: cell)! //gets path from cell
+        let recipe = recipes[indexPath.row] //access the array
+        
+        //pass the selected recipe to the details view controller
+        let detailsViewController = segue.destination as! RecipeDetailsViewController
+        detailsViewController.recipe = recipe //passes my dic to the new screen
+        
+        tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
+        
+        
     }
     
 
