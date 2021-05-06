@@ -8,21 +8,23 @@
 import UIKit
 import AlamofireImage
 
-class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
+    @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    var recipes = [[String: Any]]() //array of dictionaries
+    var recipesData = [[String: Any]]() //array of dictionaries
+    var filteredRecipes = [[String:Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
-
-        print ("Hello")
+        SearchBar.delegate = self
+        //filteredRecipes = recipes
         
         //********************************-API Request-***********************************
-        let url = URL(string: "https://api.spoonacular.com/recipes/complexSearch?apiKey=15e74b8e65dc48a5ad0e694961d81aff")!
+        let url = URL(string: "https://api.spoonacular.com/recipes/random?number=100&apiKey=15e74b8e65dc48a5ad0e694961d81aff")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -33,23 +35,43 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 
-                self.recipes = dataDictionary["results"] as! [[String: Any] ] //api info downloaded
-                self.tableView.reloadData() //refresh data inside tableview (calls my funcs again and again)
+                self.recipesData = dataDictionary["recipes"] as! [[String: Any] ] //api info downloaded
+                self.tableView.reloadData() //refresh data
+                print(self.recipesData)
+                
                 print(dataDictionary) //prints my api data
 
              }
         }
         task.resume()
     }
+    
+    //***********************-SearchBar-**********************************
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+//        filteredRecipes = []
+//        for recipe in recipesData{
+//            if recipe.contains(searchText.lowercased()){
+//                filteredRecipes.append(recipe)
+//            }
+//        }
+//        self.tableView.reloadData()
+
+    }
+    
+    
+    
+    
     //********************************-TableView-***********************************
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipes.count
+        return recipesData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
-        let recipe = recipes[indexPath.row]
+        let recipe = recipesData[indexPath.row]
         
         //getting title
         let title = recipe["title"] as! String
@@ -76,7 +98,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         //find the selected recipe
         let cell = sender as! UITableViewCell //cell tapped on
         let indexPath = tableView.indexPath(for: cell)! //gets path from cell
-        let recipe = recipes[indexPath.row] //access the array
+        let recipe = recipesData[indexPath.row] //access the array
         
         //pass the selected recipe to the details view controller
         let detailsViewController = segue.destination as! RecipeDetailsViewController
