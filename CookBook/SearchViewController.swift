@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AlamofireImage
 
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
@@ -14,6 +13,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     var recipesData = [[String: Any]]() //array of dictionaries
     var filteredRecipes = [[String:Any]]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,21 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
              }
         }
+        
+//        let baseUrl = URL(string: "")
+//
+//        let imageUrl = URL(string: "https://spoonacular.com/recipeImages/715511-556x370.jpg")
+//            // 2
+//            let imagesession = URLSession.shared
+//            // 3
+//            let dataTask = imagesession.dataTask(with: url) {data, response, error in
+//              // 4
+//              if let error = error {
+//                print("Failure! \(error.localizedDescription)")
+//              } else {
+//                print("Success! \(response!)")
+//              }
+//            }
         task.resume()
     }
     
@@ -74,14 +89,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         let recipe = recipesData[indexPath.row]
         
         //getting title
-        let title = recipe["title"] as! String
+        let title = recipe["title"] as? String
+        let image = recipe["image"] as! String
         cell.titleLabel!.text = title
         
-        //getting image
-        let baseUrl = "https://spoonacular.com/recipeImages/"
-        let imagePath = recipe["image"] as! String
-        let imageUrl = URL(string: imagePath)
-        cell.posterView?.af_setImage(withURL: imageUrl!)
+        let url = NSURL(string:image)
+            let imagedata = NSData.init(contentsOf: url! as URL)
+
+        if imagedata != nil {
+            cell.posterView.image = UIImage(data:imagedata! as Data)
+        }
+        else{
+            print("NO IMAGE")
+        }
         
         return cell
     }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AlamofireImage
 
 class RecipeDetailsViewController: UIViewController {
     
@@ -24,12 +23,19 @@ class RecipeDetailsViewController: UIViewController {
         //**************************-title + image segue-****************************************
         titleLabel.text = recipe["title"] as? String
         summaryLabel.text = recipe["summary"] as? String
-        let baseUrl = "https://spoonacular.com/recipeImages/"
-        let imagePath = recipe["image"] as! String
-        let imageUrl = URL(string: imagePath)
-        posterView?.af_setImage(withURL: imageUrl!)
-    
-         
+        
+        let image = recipe["image"] as! String
+        
+        let url = NSURL(string:image)
+            let imagedata = NSData.init(contentsOf: url! as URL)
+
+        if imagedata != nil {
+            posterView.image = UIImage(data:imagedata! as Data)
+        }
+        else{
+            print("NO IMAGE")
+        }
+        
         
     }
 }

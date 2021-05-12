@@ -16,13 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="cookBookLogo" translatesAutoresizingMaskIntoConstraints="NO" id="43L-Sy-SYB">
-                                <rect key="frame" x="-141" y="116" width="696" height="664"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cookBookLogo" translatesAutoresizingMaskIntoConstraints="NO" id="43L-Sy-SYB">
+                                <rect key="frame" x="-141" y="121" width="696" height="664"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="43L-Sy-SYB" secondAttribute="trailing" constant="-141" id="Iao-qT-IQB"/>
+                            <constraint firstItem="43L-Sy-SYB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-141" id="URa-B2-eqe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="43L-Sy-SYB" secondAttribute="bottom" constant="77" id="dea-ac-GOF"/>
+                            <constraint firstItem="43L-Sy-SYB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="yhz-e9-AI2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
