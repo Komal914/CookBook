@@ -6,9 +6,55 @@
 //
 
 import UIKit
+import AVFoundation
+import CoreData
 
 class RecipeDetailsViewController: UIViewController {
+    var managedObjectContext: NSManagedObjectContext!
+    var audioPlayer: AVAudioPlayer?
+    var favorited:Bool = false
+    let imageFilled = UIImage(named: "favor-icon-red")
+    let imageUnfilled = UIImage(named: "favor-icon copy")
     
+    func setFavorited(_ isFavorited:Bool){
+        favorited = isFavorited
+        if(favorited){
+            favRecipeButton.setImage(imageFilled, for: UIControl.State.normal)
+            favRecipeButton.zoomIn()
+        }
+        else{
+            favRecipeButton.setImage(imageUnfilled, for: UIControl.State.normal)
+        }
+        
+    }
+    
+    @IBAction func favoriteRecipe(_ sender: UIButton) {
+        let tobefavorited = !favorited
+        if(tobefavorited){
+            self.setFavorited(true)
+        }
+        else{
+            print("error: could not favorite")
+        }
+        
+        let selectedButton = sender.tag
+        switch selectedButton {
+        case 1:
+            let pathToSound = Bundle.main.path(forResource: "dingSound", ofType: "mp3")!
+            let url = URL(fileURLWithPath: pathToSound)
+            
+            do{
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch{
+                //error handled
+            }
+        default:
+            return
+        }
+        
+    }
+    @IBOutlet weak var favRecipeButton: UIButton!
     var recipeSummary = [String: Any]()
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,12 +63,15 @@ class RecipeDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
         //**************************-title + image segue-****************************************
         titleLabel.text = recipe["title"] as? String
-        summaryLabel.text = recipe["summary"] as? String
+        //summaryLabel.text = recipe["summary"] as? String
+        let oldSummary = recipe["summary"] as? String
+        let newSummary = oldSummary?.trimHTMLTags()
+        summaryLabel.text = newSummary
+
         
         let image = recipe["image"] as! String
         
@@ -36,6 +85,10 @@ class RecipeDetailsViewController: UIViewController {
             print("NO IMAGE")
         }
         
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
 }

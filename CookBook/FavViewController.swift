@@ -8,6 +8,10 @@
 import UIKit
 
 class FavViewController: UIViewController {
+    
+    @IBOutlet weak var favTableView: UITableView!
+    var recipe = [[String:Any]]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -6,14 +6,15 @@
 //
 
 import UIKit
-
+import CoreData
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
+    var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var recipesData = [[String: Any]]() //array of dictionaries
     var filteredRecipes = [[String:Any]]()
-    
+    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=100&apiKey=15e74b8e65dc48a5ad0e694961d81aff")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         //filteredRecipes = recipes
         
         //********************************-API Request-***********************************
-        let url = URL(string: "https://api.spoonacular.com/recipes/random?number=100&apiKey=15e74b8e65dc48a5ad0e694961d81aff")!
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        
+        let request = URLRequest(url: RandomUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
              // This will run when the network request returns
@@ -90,11 +91,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //getting title
         let title = recipe["title"] as? String
-        let image = recipe["image"] as! String
+        guard let image = (recipe["image"] as? String) else { return cell } //exit function if empty
         cell.titleLabel!.text = title
         
         let url = NSURL(string:image)
-            let imagedata = NSData.init(contentsOf: url! as URL)
+        let imagedata = NSData.init(contentsOf: url as! URL)
 
         if imagedata != nil {
             cell.posterView.image = UIImage(data:imagedata! as Data)
@@ -102,7 +103,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         else{
             print("NO IMAGE")
         }
-        
+
         return cell
     }
     //********************************-SegueToRecipeDetails-***********************************
@@ -125,6 +126,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         detailsViewController.recipe = recipe //passes my dic to the new screen
         
         tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
+        
         
         
     }
