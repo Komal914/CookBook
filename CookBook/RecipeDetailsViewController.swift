@@ -35,7 +35,6 @@ class RecipeDetailsViewController: UIViewController,  UITableViewDataSource, UIT
         
         let title = recipe?["title"] as? String
         guard let image = (recipe?["image"] as? String) else { return cell } //exit function if empty
-        print("Image:", (image))
         let url = NSURL(string:image)
          let imagedata = NSData.init(contentsOf: url as! URL)
 
@@ -49,6 +48,10 @@ class RecipeDetailsViewController: UIViewController,  UITableViewDataSource, UIT
         let oldSummary = recipe!["summary"] as? String
         let newSummary = oldSummary?.trimHTMLTags()
         cell.summaryLabel!.text = newSummary
+        
+        let oldInstructions = recipe!["instructions"] as? String
+        let newInstructions = oldInstructions?.trimHTMLTags()
+        cell.instructionsLabel!.text = newInstructions
         
 
         
@@ -101,6 +104,7 @@ class RecipeDetailsViewController: UIViewController,  UITableViewDataSource, UIT
     
     
 func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
 //        // Get the new view controller using segue.destination.
 //        // Pass the selected object to the new view controller.
 //

@@ -10,6 +10,7 @@ import AVFoundation
 import CoreData
 
 class recipeDetailCell: UITableViewCell {
+    @IBOutlet weak var instructionsLabel: UILabel!
     var managedObjectContext: NSManagedObjectContext!
     var recipe: [String: Any]? //now only a dictionary, not array of dic
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

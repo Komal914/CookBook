@@ -9,7 +9,6 @@ import UIKit
 
 class FavCell: UITableViewCell {
 
-    @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {

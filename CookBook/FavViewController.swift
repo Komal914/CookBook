@@ -34,6 +34,9 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+               return 1
+           }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavCell", for: indexPath)
@@ -57,7 +60,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         super.viewDidLoad()
         favTableView.dataSource = self
         favTableView.delegate = self
-        fetchData()
+        //fetchData()
         //getAllItems()
         
         // Do any additional setup after loading the view.

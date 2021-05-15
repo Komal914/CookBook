@@ -92,13 +92,13 @@
 				4B6C05632633D7F700D53F83 /* LaunchScreen.storyboard */,
 				4B6C05662633D7F700D53F83 /* Info.plist */,
 				4B6C055E2633D7F200D53F83 /* CookBook.xcdatamodeld */,
-				4B6C05752633E20300D53F83 /* FavViewController.swift */,
-				4B6C05792633E49500D53F83 /* SearchViewController.swift */,
-				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
 				4B6C057C2634071E00D53F83 /* SearchCell.swift */,
+				4B6C05792633E49500D53F83 /* SearchViewController.swift */,
+				4B6D59EA264F11280005C759 /* recipeDetailCell.swift */,
+				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
 				4BCD8261264B85F700EC1AD0 /* Extension.swift */,
 				4B711F97264CA4F800008380 /* FavCell.swift */,
-				4B6D59EA264F11280005C759 /* recipeDetailCell.swift */,
+				4B6C05752633E20300D53F83 /* FavViewController.swift */,
 			);
 			path = CookBook;
 			sourceTree = "<group>";
