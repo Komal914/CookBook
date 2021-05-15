@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 
+
 extension FavRecipe {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<FavRecipe> {
