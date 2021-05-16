@@ -12,7 +12,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var tableView: UITableView!
     var recipesData = [[String: Any]]() //array of dictionaries
-    var filteredRecipes = [[String:Any]]()
     let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=100&apiKey=15e74b8e65dc48a5ad0e694961d81aff")!
 //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
@@ -34,7 +33,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 
-                self.recipesData = dataDictionary["recipes"] as! [[String: Any] ] //api info downloaded
+                self.recipesData = dataDictionary["recipes"] as! [[String: Any] ]//api info downloaded
+                
                 self.tableView.reloadData() //refresh data
                 //print(self.recipesData)
                 
@@ -61,6 +61,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //getting title
         let title = recipe["title"] as? String
+       
         guard let image = (recipe["image"] as? String) else { return cell } //exit function if empty
         cell.titleLabel!.text = title
         

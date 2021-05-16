@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import CoreData
+import Parse
 
 class recipeDetailCell: UITableViewCell {
     @IBOutlet weak var instructionsLabel: UILabel!
@@ -20,16 +21,45 @@ class recipeDetailCell: UITableViewCell {
     let imageUnfilled = UIImage(named: "favor-icon copy")
     var saveFav:Bool = false
     var listOfObjects: [Any]?
-
+    
+    
+    
     @IBAction func favoriteRecipe(_ sender: Any) {
         let tobefavorited = !favorited
+        var buttonPressed:Bool = true
         if(tobefavorited){
+            //sets the color to red and zooms animation
             self.setFavorited(true)
-            print("this pic is red")
+            let frecipe = PFObject(className: "FaveRecipes")
+            frecipe["title"] = recipe!["title"] as? String
+            frecipe["imageUrl"] = recipe!["image"] as? String
+            frecipe.saveInBackground { (success, error) in
+                if success{
+                    print("yay saved!")
+                }
+                else{
+                    print("couldnt save it smh")
+                }
+            }
+            
+            
+            
+            //creates a new item inside container 
+//            let newItem = FavRecipe(context: self.context)
+//            newItem.title = title.text
+//            newItem.summary = summaryLabel.text
+//            print("This is the item name:", newItem.title)
+//            do{
+//                try context.save()
+//            }
+//            catch{
+//
+//            }
         }
         else{
             self.setFavorited(false)
         }
+        print("value of button pressed:", (buttonPressed))
 
         favRecipeButton.tag = 1
         let selectedButton = (sender as AnyObject).tag
