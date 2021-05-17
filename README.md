@@ -1,3 +1,3 @@
 # CookBook
 
-## This Application allows the user to search new recipes and save them into a favorites tab bar.
+## This Application generates random recipes for the user which can be saved and deleted inside the favorites tab bar. 
