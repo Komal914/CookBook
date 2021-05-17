@@ -26,17 +26,17 @@ extension String {
 }
 extension UIView {
 
-/**
- Simply zooming in of a view: set view scale to 0 and zoom to Identity on 'duration' time interval.
-
- - parameter duration: animation duration
- */
-func zoomIn(duration: TimeInterval = 0.2) {
+func zoomIn(duration: TimeInterval = 0.3) {
     self.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-    UIView.animate(withDuration: duration, delay: 0.0, options: [.curveLinear], animations: { () -> Void in
+    UIView.animate(withDuration: duration, delay: 0.1, options: [.curveLinear], animations: { () -> Void in
         self.transform = CGAffineTransform.identity
     }) { (animationCompleted: Bool) -> Void in
     }
 }
 }
+
+
+
+
+
 

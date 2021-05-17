@@ -6,88 +6,96 @@
 //
 
 import UIKit
-import CoreData
+import Parse
 
 class FavViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var items:[FavRecipe]?
-    
-    func getAllItems(){
-        do {
-            self.items = try context.fetch(FavRecipe.fetchRequest())
-                self.tableView.reloadData()
-        }
-        catch{
-            //error handeling
-        }
-    }
-    
-    
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items?.count ?? 4
-    }
-   //
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavCell") as! FavCell
-        //getAllItems()
-        let recipe = self.items?[indexPath.row]
-    
-        cell.titleLabel!.text = recipe?.title
-        
-
-        return cell
-    }
-    
-    
-   
-    
-    
-    
-    
-    //MARK: TableView
     @IBOutlet weak var tableView: UITableView!
+    var frecipes = [PFObject]()
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let query = PFQuery(className:"FaveRecipes")
+        query.includeKey("title")
+        query.limit = 300
+        query.findObjectsInBackground{
+            (frecipes, error) in
+            if frecipes != nil{
+                self.frecipes = frecipes!
+                self.tableView.reloadData()
+            }
+        }
+        tableView.reloadData()
+    }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        //fetchData()
-        //getAllItems()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return frecipes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavCell") as! FavCell
+        let recipe = frecipes[indexPath.row]
         
-        // Do any additional setup after loading the view.
-    }
-    
-    
+        cell.titleLabel.text = recipe["title"] as! String
+        
+        let imageString = (recipe["imageUrl"] as? String)!
+        
+        let url = NSURL(string:imageString ?? "https://spoonacular.com/recipeImages/639891-556x370.jpg")
+        let imagedata = NSData.init(contentsOf: url as! URL)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    func fetchData(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
+        if imagedata != nil {
+            cell.posterView.image = UIImage(data:imagedata! as Data)
         }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavRecipe")
-        
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            for data in result as! [NSManagedObject]{
-                print (data.value(forKey: "title") as! String)
+        else{
+            print("NO IMAGE")
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let drecipe = frecipes[indexPath.row] as! PFObject
+            self.frecipes.remove(at: indexPath.row)
+            self.tableView.deleteRows(at:[indexPath], with: .automatic )
+            drecipe.deleteInBackground() { (success, error) in
+                if success{
+                    print("deleted")
+                }
+                else{
+                    print("not deleted ")
+                }
             }
-        } catch{
-            print("could not fetch favrecipe")
+
         }
+        
+    }
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//
+//
+//        //find the selected recipe
+//        let cell = sender as! UITableViewCell //cell tapped on
+//        let indexPath = tableView.indexPath(for: cell)! //gets path from cell
+//        let recipe = frecipes[indexPath.row] as! [String : Any] //access the array
+//
+//        //pass the selected recipe to the details view controller
+//        let detailsViewController = segue.destination as! RecipeDetailsViewController
+//        detailsViewController.recipe = recipe //passes my dic to the new screen
+//
+//        tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
+        
         
     }
 

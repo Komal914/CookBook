@@ -11,12 +11,15 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var tableView: UITableView!
-    var recipesData = [[String: Any]]() //array of dictionaries
-    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=100&apiKey=15e74b8e65dc48a5ad0e694961d81aff")!
+    var recipeData = [[String: Any?]]() //array of dictionaries
+    var newData = [[String: Any]]()
+    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=1&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
 //MARK: VIEWDIDLOAD
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         tableView.dataSource = self
         tableView.delegate = self
         //filteredRecipes = recipes
@@ -33,12 +36,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 
-                self.recipesData = dataDictionary["recipes"] as! [[String: Any] ]//api info downloaded
-                
+                self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
+                    //api info downloaded
+                    
                 self.tableView.reloadData() //refresh data
-                //print(self.recipesData)
-                
-                //print(dataDictionary) //prints my api data
 
              }
         }
@@ -52,12 +53,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK:TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipesData.count
+        return recipeData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
-        let recipe = recipesData[indexPath.row]
+        let recipe = recipeData[indexPath.row]
         
         //getting title
         let title = recipe["title"] as? String
@@ -90,7 +91,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         //find the selected recipe
         let cell = sender as! UITableViewCell //cell tapped on
         let indexPath = tableView.indexPath(for: cell)! //gets path from cell
-        let recipe = recipesData[indexPath.row] //access the array
+        let recipe = recipeData[indexPath.row] //access the array
         
         //pass the selected recipe to the details view controller
         let detailsViewController = segue.destination as! RecipeDetailsViewController

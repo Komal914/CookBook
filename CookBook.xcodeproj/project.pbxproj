@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,18 +16,14 @@
 		4B6C05762633E20300D53F83 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C05752633E20300D53F83 /* FavViewController.swift */; };
 		4B6C057A2633E49500D53F83 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C05792633E49500D53F83 /* SearchViewController.swift */; };
 		4B6C057D2634071E00D53F83 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C057C2634071E00D53F83 /* SearchCell.swift */; };
-		4B6D59EB264F11280005C759 /* recipeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6D59EA264F11280005C759 /* recipeDetailCell.swift */; };
 		4B711F8B264C84EF00008380 /* dingSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B711F8A264C84EF00008380 /* dingSound.mp3 */; };
 		4B711F98264CA4F800008380 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B711F97264CA4F800008380 /* FavCell.swift */; };
 		4B745C852638E4E100F80A15 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */; };
-		4BBC5D75264DEF0200672FAA /* FavRecipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5D74264DEF0200672FAA /* FavRecipe+CoreDataClass.swift */; };
-		4BBC5D78264DEF0600672FAA /* FavRecipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5D77264DEF0600672FAA /* FavRecipe+CoreDataProperties.swift */; };
 		4BCD8262264B85F700EC1AD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD8261264B85F700EC1AD0 /* Extension.swift */; };
-		606D0992357C5F3CC7AE70B9 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94CB124995230CCEB245AFA /* Pods_CookBook.framework */; };
+		AEF8FE92A55E2D0B60B27276 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1139D067D2ECB7DAF0FC54D /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		150D6042C595FE149C1869FF /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		4B6C05522633D7F200D53F83 /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C05552633D7F200D53F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6C05572633D7F200D53F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,15 +35,13 @@
 		4B6C05752633E20300D53F83 /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		4B6C05792633E49500D53F83 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4B6C057C2634071E00D53F83 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		4B6D59EA264F11280005C759 /* recipeDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeDetailCell.swift; sourceTree = "<group>"; };
 		4B711F8A264C84EF00008380 /* dingSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dingSound.mp3; sourceTree = "<group>"; };
 		4B711F97264CA4F800008380 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
-		4BBC5D74264DEF0200672FAA /* FavRecipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavRecipe+CoreDataClass.swift"; path = "/Users/komal/Desktop/CookBook/CookBook/FavRecipe+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		4BBC5D77264DEF0600672FAA /* FavRecipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavRecipe+CoreDataProperties.swift"; path = "/Users/komal/Desktop/CookBook/CookBook/FavRecipe+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		4BCD8261264B85F700EC1AD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		87AA2DD86B7A55C771158B16 /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
-		A94CB124995230CCEB245AFA /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69845F9A562548788FDAA253 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
+		7F5F489E934C7C6770FD1556 /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
+		E1139D067D2ECB7DAF0FC54D /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,20 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				606D0992357C5F3CC7AE70B9 /* Pods_CookBook.framework in Frameworks */,
+				AEF8FE92A55E2D0B60B27276 /* Pods_CookBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0514B2C95249FC7013BE7C2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1139D067D2ECB7DAF0FC54D /* Pods_CookBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4B6C05492633D7F200D53F83 = {
 			isa = PBXGroup;
 			children = (
 				4B6C05542633D7F200D53F83 /* CookBook */,
 				4B6C05532633D7F200D53F83 /* Products */,
 				4B8C97C79B3814207DB13A7A /* Pods */,
-				53742881CC36E801CFF201EE /* Frameworks */,
+				0514B2C95249FC7013BE7C2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,7 +85,6 @@
 		4B6C05542633D7F200D53F83 /* CookBook */ = {
 			isa = PBXGroup;
 			children = (
-				4BBC5D7A264DEF2E00672FAA /* FavRecipeItem */,
 				4B711F89264C84BA00008380 /* sounds */,
 				4B6C05552633D7F200D53F83 /* AppDelegate.swift */,
 				4B6C05572633D7F200D53F83 /* SceneDelegate.swift */,
@@ -94,9 +95,8 @@
 				4B6C055E2633D7F200D53F83 /* CookBook.xcdatamodeld */,
 				4B6C057C2634071E00D53F83 /* SearchCell.swift */,
 				4B6C05792633E49500D53F83 /* SearchViewController.swift */,
-				4B6D59EA264F11280005C759 /* recipeDetailCell.swift */,
-				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
 				4BCD8261264B85F700EC1AD0 /* Extension.swift */,
+				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
 				4B711F97264CA4F800008380 /* FavCell.swift */,
 				4B6C05752633E20300D53F83 /* FavViewController.swift */,
 			);
@@ -114,27 +114,10 @@
 		4B8C97C79B3814207DB13A7A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				87AA2DD86B7A55C771158B16 /* Pods-CookBook.debug.xcconfig */,
-				150D6042C595FE149C1869FF /* Pods-CookBook.release.xcconfig */,
+				7F5F489E934C7C6770FD1556 /* Pods-CookBook.debug.xcconfig */,
+				69845F9A562548788FDAA253 /* Pods-CookBook.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		4BBC5D7A264DEF2E00672FAA /* FavRecipeItem */ = {
-			isa = PBXGroup;
-			children = (
-				4BBC5D77264DEF0600672FAA /* FavRecipe+CoreDataProperties.swift */,
-				4BBC5D74264DEF0200672FAA /* FavRecipe+CoreDataClass.swift */,
-			);
-			path = FavRecipeItem;
-			sourceTree = "<group>";
-		};
-		53742881CC36E801CFF201EE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A94CB124995230CCEB245AFA /* Pods_CookBook.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B6C05692633D7F700D53F83 /* Build configuration list for PBXNativeTarget "CookBook" */;
 			buildPhases = (
-				765B8526EC8F3EC1C539D371 /* [CP] Check Pods Manifest.lock */,
+				D144C6EBAFEF496A315A904B /* [CP] Check Pods Manifest.lock */,
 				4B6C054E2633D7F200D53F83 /* Sources */,
 				4B6C054F2633D7F200D53F83 /* Frameworks */,
 				4B6C05502633D7F200D53F83 /* Resources */,
-				851FDA6EE039569AB3C034D0 /* [CP] Embed Pods Frameworks */,
+				DD65E34CCA3B69B7080F085C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,7 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		765B8526EC8F3EC1C539D371 /* [CP] Check Pods Manifest.lock */ = {
+		D144C6EBAFEF496A315A904B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,7 +211,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		851FDA6EE039569AB3C034D0 /* [CP] Embed Pods Frameworks */ = {
+		DD65E34CCA3B69B7080F085C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,10 +238,7 @@
 				4B6C057A2633E49500D53F83 /* SearchViewController.swift in Sources */,
 				4B711F98264CA4F800008380 /* FavCell.swift in Sources */,
 				4B6C057D2634071E00D53F83 /* SearchCell.swift in Sources */,
-				4BBC5D75264DEF0200672FAA /* FavRecipe+CoreDataClass.swift in Sources */,
-				4B6D59EB264F11280005C759 /* recipeDetailCell.swift in Sources */,
 				4B6C05602633D7F200D53F83 /* CookBook.xcdatamodeld in Sources */,
-				4BBC5D78264DEF0600672FAA /* FavRecipe+CoreDataProperties.swift in Sources */,
 				4B745C852638E4E100F80A15 /* RecipeDetailsViewController.swift in Sources */,
 				4B6C05562633D7F200D53F83 /* AppDelegate.swift in Sources */,
 				4B6C05762633E20300D53F83 /* FavViewController.swift in Sources */,
@@ -407,7 +387,7 @@
 		};
 		4B6C056A2633D7F700D53F83 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87AA2DD86B7A55C771158B16 /* Pods-CookBook.debug.xcconfig */;
+			baseConfigurationReference = 7F5F489E934C7C6770FD1556 /* Pods-CookBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -427,7 +407,7 @@
 		};
 		4B6C056B2633D7F700D53F83 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 150D6042C595FE149C1869FF /* Pods-CookBook.release.xcconfig */;
+			baseConfigurationReference = 69845F9A562548788FDAA253 /* Pods-CookBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
