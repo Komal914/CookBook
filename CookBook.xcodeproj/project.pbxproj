@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,9 +20,13 @@
 		4B711F98264CA4F800008380 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B711F97264CA4F800008380 /* FavCell.swift */; };
 		4B745C852638E4E100F80A15 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */; };
 		4BCD8262264B85F700EC1AD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD8261264B85F700EC1AD0 /* Extension.swift */; };
+		C1C1D733298853F967C3B8AA /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1FF25B7D17A25F0A4EC1C9 /* Pods_CookBook.framework */; };
+		EED257F227CAB83F00401296 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = EED257F127CAB83F00401296 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32504B13A2221179119279AA /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
+		4B1FF25B7D17A25F0A4EC1C9 /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C05522633D7F200D53F83 /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C05552633D7F200D53F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6C05572633D7F200D53F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 		4B711F97264CA4F800008380 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		4BCD8261264B85F700EC1AD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		935399CA53FF81402554F26A /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +50,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED257F227CAB83F00401296 /* AlamofireImage in Frameworks */,
+				C1C1D733298853F967C3B8AA /* Pods_CookBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A7D6C213C7D8CEDEBA160BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B1FF25B7D17A25F0A4EC1C9 /* Pods_CookBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4B6C05492633D7F200D53F83 = {
 			isa = PBXGroup;
 			children = (
 				4B6C05542633D7F200D53F83 /* CookBook */,
 				4B6C05532633D7F200D53F83 /* Products */,
+				D032B91AAC0FAFC70DAEB216 /* Pods */,
+				1A7D6C213C7D8CEDEBA160BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +113,16 @@
 			path = sounds;
 			sourceTree = "<group>";
 		};
+		D032B91AAC0FAFC70DAEB216 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32504B13A2221179119279AA /* Pods-CookBook.debug.xcconfig */,
+				935399CA53FF81402554F26A /* Pods-CookBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,17 +130,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B6C05692633D7F700D53F83 /* Build configuration list for PBXNativeTarget "CookBook" */;
 			buildPhases = (
-				D144C6EBAFEF496A315A904B /* [CP] Check Pods Manifest.lock */,
+				23AF89672EE6AB31DE09498D /* [CP] Check Pods Manifest.lock */,
 				4B6C054E2633D7F200D53F83 /* Sources */,
 				4B6C054F2633D7F200D53F83 /* Frameworks */,
 				4B6C05502633D7F200D53F83 /* Resources */,
-				DD65E34CCA3B69B7080F085C /* [CP] Embed Pods Frameworks */,
+				7EEF5813F5BB7899465E616D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CookBook;
+			packageProductDependencies = (
+				EED257F127CAB83F00401296 /* AlamofireImage */,
+			);
 			productName = CookBook;
 			productReference = 4B6C05522633D7F200D53F83 /* CookBook.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 4B6C05492633D7F200D53F83;
+			packageReferences = (
+				EED257F027CAB83E00401296 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 4B6C05532633D7F200D53F83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -165,7 +198,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D144C6EBAFEF496A315A904B /* [CP] Check Pods Manifest.lock */ = {
+		23AF89672EE6AB31DE09498D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,7 +220,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD65E34CCA3B69B7080F085C /* [CP] Embed Pods Frameworks */ = {
+		7EEF5813F5BB7899465E616D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,6 +396,7 @@
 		};
 		4B6C056A2633D7F700D53F83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32504B13A2221179119279AA /* Pods-CookBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +416,7 @@
 		};
 		4B6C056B2633D7F700D53F83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 935399CA53FF81402554F26A /* Pods-CookBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -421,6 +456,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EED257F027CAB83E00401296 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EED257F127CAB83F00401296 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EED257F027CAB83E00401296 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4B6C055E2633D7F200D53F83 /* CookBook.xcdatamodeld */ = {
