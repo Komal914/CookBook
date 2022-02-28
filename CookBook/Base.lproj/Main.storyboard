@@ -262,23 +262,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavCell" rowHeight="352" id="Iwp-gC-wuA" customClass="FavCell" customModule="CookBook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="352"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavCell" rowHeight="383" id="Iwp-gC-wuA" customClass="FavCell" customModule="CookBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="383"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iwp-gC-wuA" id="l8h-Kd-QBj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="383"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-xb-Il0">
-                                                    <rect key="frame" x="30" y="15" width="354" height="19"/>
-                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="30" y="23" width="354" height="50"/>
+                                                    <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="25"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKk-rw-YWV">
-                                                    <rect key="frame" x="0.0" y="38" width="414" height="314"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKk-rw-YWV">
+                                                    <rect key="frame" x="20" y="89" width="374" height="294"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="iKk-rw-YWV" secondAttribute="height" multiplier="421:212" constant="-209.55660377358492" id="KE9-YI-QXQ"/>
+                                                        <constraint firstAttribute="width" secondItem="iKk-rw-YWV" secondAttribute="height" multiplier="421:212" constant="-209.83962264150944" id="KE9-YI-QXQ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -289,11 +289,11 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="iKk-rw-YWV" firstAttribute="top" secondItem="HtX-xb-Il0" secondAttribute="bottom" constant="4" id="4Ml-zV-tzi"/>
-                                                <constraint firstItem="HtX-xb-Il0" firstAttribute="top" secondItem="l8h-Kd-QBj" secondAttribute="topMargin" constant="4" id="Du2-LN-my2"/>
+                                                <constraint firstItem="iKk-rw-YWV" firstAttribute="top" secondItem="HtX-xb-Il0" secondAttribute="bottom" constant="16" id="4Ml-zV-tzi"/>
+                                                <constraint firstItem="HtX-xb-Il0" firstAttribute="top" secondItem="l8h-Kd-QBj" secondAttribute="topMargin" constant="12" id="Du2-LN-my2"/>
                                                 <constraint firstItem="HtX-xb-Il0" firstAttribute="leading" secondItem="l8h-Kd-QBj" secondAttribute="leadingMargin" constant="10" id="NzN-AU-xZy"/>
-                                                <constraint firstItem="iKk-rw-YWV" firstAttribute="leading" secondItem="l8h-Kd-QBj" secondAttribute="leading" id="P2l-Kn-Ol2"/>
-                                                <constraint firstAttribute="trailing" secondItem="iKk-rw-YWV" secondAttribute="trailing" id="cjq-g6-nhO"/>
+                                                <constraint firstItem="iKk-rw-YWV" firstAttribute="leading" secondItem="l8h-Kd-QBj" secondAttribute="leading" constant="20" id="P2l-Kn-Ol2"/>
+                                                <constraint firstAttribute="trailing" secondItem="iKk-rw-YWV" secondAttribute="trailing" constant="20" id="cjq-g6-nhO"/>
                                                 <constraint firstAttribute="bottom" secondItem="iKk-rw-YWV" secondAttribute="bottom" id="h86-Aj-h6F"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HtX-xb-Il0" secondAttribute="trailing" constant="10" id="urv-gV-i1e"/>
                                             </constraints>
