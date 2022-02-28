@@ -44,6 +44,67 @@ This Application generates random recipes for the user. By clicking on the recip
 ## Wireframe
 ![](https://i.imgur.com/BW1BJxr.jpg)
 
+## Schema 
+### Models
+#### Recipes:
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | Recipe name      | String   |  The name of the recipe |
+   | Recipe Image     | png |  The image associated with relvant recipe|
+   | Recipe Description | string | Brief summary of the food |
+   | Recipe Instructions | string | List of instructions on how to prepare the dish |
+ 
+ 
+ 
+### Networking
+#### Lists of Network Requests by Screen
+ - Random Recipes
+    - (Read/Get) Query random recipes from the API
+```swift
+let query = PFQuery(className:"GameScore")
+query.getObjectInBackground(withId: "xWMyZEGZ") { (gameScore, error) in
+    if error == nil {
+       	 let score = gameScore["score"] as? Int
+let playerName = gameScore["playerName"] as? String
+let cheatMode = gameScore["cheatMode"] as? Bool
+
+    } else {
+        // Fail!
+    }
+}
+```
+
+
+
+  - Favorites 
+    - (Read/Get) Query all saved recipes of the user
+```swift
+let query = PFQuery(className:"GameScore")
+query.getObjectInBackground(withId: "xWMyZEGZ") { (gameScore, error) in
+    if error == nil {
+       	 let score = gameScore["score"] as? Int
+let playerName = gameScore["playerName"] as? String
+let cheatMode = gameScore["cheatMode"] as? Bool
+
+    } else {
+        // Fail!
+    }
+}
+```
+
+-
+   - (Delete) Users can delete a saved recipe 
+```swift
+PFObject.deleteAll(inBackground: objectArray) { (succeeded, error) in
+    if (succeeded) {
+        // The array of objects was successfully deleted.
+    } else {
+        // There was an error. Check the errors localizedDescription.
+    }
+}
+```
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
