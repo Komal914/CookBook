@@ -37,6 +37,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 
                 
                 self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
+//                 print("Recipes in dictionary:", self.recipeData)
                     //api info downloaded
                     
                 self.tableView.reloadData() //refresh data
@@ -53,12 +54,14 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK:TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return recipeData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
         let recipe = recipeData[indexPath.row]
+        print("Number of recipes in tableview: ", recipeData.count)
         
         //getting title
         let title = recipe["title"] as? String

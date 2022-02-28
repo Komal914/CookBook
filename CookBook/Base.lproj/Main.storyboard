@@ -127,31 +127,31 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-vf-QRG">
-                                                <rect key="frame" x="10" y="586.5" width="394" height="32.5"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="28"/>
+                                                <rect key="frame" x="10" y="594.5" width="394" height="28"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk6-B3-0qd">
-                                                <rect key="frame" x="10" y="498.5" width="394" height="32.5"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="28"/>
+                                                <rect key="frame" x="10" y="514.5" width="394" height="28"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usn-TN-r6C">
-                                                <rect key="frame" x="10" y="541" width="394" height="25.5"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                                <rect key="frame" x="10" y="552.5" width="394" height="22"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gc-5I-4rh">
-                                                <rect key="frame" x="10" y="40" width="394" height="32.5"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="28"/>
+                                                <rect key="frame" x="10" y="40" width="394" height="28"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-KU-Yx1">
-                                                <rect key="frame" x="0.0" y="95" width="414" height="393.5"/>
+                                                <rect key="frame" x="0.0" y="90.5" width="414" height="414"/>
                                                 <color key="backgroundColor" red="0.012599183369999999" green="0.01081727884" blue="0.01271874014" alpha="0.921046276" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -161,8 +161,8 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-lJ-hyN">
-                                                <rect key="frame" x="10" y="641.5" width="394" height="25.5"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                                <rect key="frame" x="10" y="645" width="394" height="22"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
@@ -262,33 +262,39 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavCell" rowHeight="354" id="Iwp-gC-wuA" customClass="FavCell" customModule="CookBook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="354"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavCell" rowHeight="352" id="Iwp-gC-wuA" customClass="FavCell" customModule="CookBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="352"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iwp-gC-wuA" id="l8h-Kd-QBj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="354"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-xb-Il0">
-                                                    <rect key="frame" x="30" y="15" width="354" height="20.5"/>
+                                                    <rect key="frame" x="30" y="15" width="354" height="19"/>
                                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKk-rw-YWV">
-                                                    <rect key="frame" x="-27" y="39.5" width="461" height="304.5"/>
+                                                    <rect key="frame" x="0.0" y="38" width="414" height="314"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="iKk-rw-YWV" secondAttribute="height" multiplier="421:212" constant="-144.02358490566041" id="KE9-YI-QXQ"/>
+                                                        <constraint firstAttribute="width" secondItem="iKk-rw-YWV" secondAttribute="height" multiplier="421:212" constant="-209.55660377358492" id="KE9-YI-QXQ"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="iKk-rw-YWV" firstAttribute="top" secondItem="HtX-xb-Il0" secondAttribute="bottom" constant="4" id="4Ml-zV-tzi"/>
                                                 <constraint firstItem="HtX-xb-Il0" firstAttribute="top" secondItem="l8h-Kd-QBj" secondAttribute="topMargin" constant="4" id="Du2-LN-my2"/>
                                                 <constraint firstItem="HtX-xb-Il0" firstAttribute="leading" secondItem="l8h-Kd-QBj" secondAttribute="leadingMargin" constant="10" id="NzN-AU-xZy"/>
-                                                <constraint firstItem="iKk-rw-YWV" firstAttribute="leading" secondItem="l8h-Kd-QBj" secondAttribute="leading" constant="-27" id="P2l-Kn-Ol2"/>
-                                                <constraint firstAttribute="trailing" secondItem="iKk-rw-YWV" secondAttribute="trailing" constant="-20" id="cjq-g6-nhO"/>
-                                                <constraint firstAttribute="bottom" secondItem="iKk-rw-YWV" secondAttribute="bottom" constant="10" id="h86-Aj-h6F"/>
+                                                <constraint firstItem="iKk-rw-YWV" firstAttribute="leading" secondItem="l8h-Kd-QBj" secondAttribute="leading" id="P2l-Kn-Ol2"/>
+                                                <constraint firstAttribute="trailing" secondItem="iKk-rw-YWV" secondAttribute="trailing" id="cjq-g6-nhO"/>
+                                                <constraint firstAttribute="bottom" secondItem="iKk-rw-YWV" secondAttribute="bottom" id="h86-Aj-h6F"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HtX-xb-Il0" secondAttribute="trailing" constant="10" id="urv-gV-i1e"/>
                                             </constraints>
                                         </tableViewCellContentView>
