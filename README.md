@@ -45,7 +45,7 @@ This Application generates random recipes for the user. By clicking on the recip
 ![](https://i.imgur.com/BW1BJxr.jpg)
 
 ## Schema 
-### Models
+### Model
 #### Recipes:
 
    | Property      | Type     | Description |
