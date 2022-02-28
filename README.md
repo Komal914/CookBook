@@ -60,20 +60,30 @@ This Application generates random recipes for the user. By clicking on the recip
 ### Networking
 #### Lists of Network Requests by Screen
  - Random Recipes
-    - (Read/Get) Query random recipes from the API
-```swift
-let query = PFQuery(className:"GameScore")
-query.getObjectInBackground(withId: "xWMyZEGZ") { (gameScore, error) in
-    if error == nil {
-       	 let score = gameScore["score"] as? Int
-let playerName = gameScore["playerName"] as? String
-let cheatMode = gameScore["cheatMode"] as? Bool
+    - (Read/Get) Query random recipes from the Spoonacular API
 
-    } else {
-        // Fail!
-    }
-}
-```
+```swift
+ //MARK:API Request
+        
+        let request = URLRequest(url: RandomUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+             // This will run when the network request returns
+             if let error = error {
+                    print(error.localizedDescription)
+             } else if let data = data {
+                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                
+                
+                self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
+//                 print("Recipes in dictionary:", self.recipeData)
+                    //api info downloaded
+                    
+                self.tableView.reloadData() //refresh data
+
+             }
+        }
+  ```
 
 
 
