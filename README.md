@@ -82,35 +82,34 @@ This Application generates random recipes for the user. By clicking on the recip
              }
         }
   ```
-
+  After this data is loaded, once the user clicks on the recipe selected -> that recipe details are segued onto the recipe details page
 
 
   - Favorites 
     - (Read/Get) Query all saved recipes of the user
 ```swift
-let query = PFQuery(className:"GameScore")
-query.getObjectInBackground(withId: "xWMyZEGZ") { (gameScore, error) in
-    if error == nil {
-       	 let score = gameScore["score"] as? Int
-let playerName = gameScore["playerName"] as? String
-let cheatMode = gameScore["cheatMode"] as? Bool
-
-    } else {
-        // Fail!
-    }
-}
+let query = PFQuery(className:"FaveRecipes")
+        query.includeKey("title")
+        query.limit = 300
+query.findObjectsInBackground{
+            (frecipes, error) in
+            if frecipes != nil{
+                self.frecipes = frecipes!
+                self.tableView.reloadData()
+            }
+        }
 ```
 
 -
    - (Delete) Users can delete a saved recipe 
 ```swift
-PFObject.deleteAll(inBackground: objectArray) { (succeeded, error) in
-    if (succeeded) {
-        // The array of objects was successfully deleted.
-    } else {
-        // There was an error. Check the errors localizedDescription.
-    }
-}
+drecipe.deleteInBackground() { (success, error) in
+                if success{
+                    print("deleted")
+                }
+                else{
+                    print("not deleted ")
+                }
 ```
 
 ## Video Walkthrough
