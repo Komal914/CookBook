@@ -75,9 +75,7 @@ This Application generates random recipes for the user. By clicking on the recip
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 
-                self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
-//                 print("Recipes in dictionary:", self.recipeData)
-                    //api info downloaded
+                self.recipeData = dataDictionary["recipes"] as! [[String: Any]] //api info downloaded
                     
                 self.tableView.reloadData() //refresh data
 
