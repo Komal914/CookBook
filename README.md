@@ -1,5 +1,5 @@
 # CookBook
-##### Tags: `iOS` `API` `Soonacular` `Parse` `Back4App` `alamoFireImage` 
+##### Tags: `iOS` `REST API` `Spoonacular` `Parse` `Back4App` `alamoFireImage` 
 
 ## Table of Contents
 1. [Overview](#Overview)
