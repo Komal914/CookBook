@@ -272,7 +272,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-xb-Il0">
                                                     <rect key="frame" x="30" y="23" width="354" height="50"/>
                                                     <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="25"/>
-                                                    <color key="textColor" systemColor="systemRedColor"/>
+                                                    <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKk-rw-YWV">
