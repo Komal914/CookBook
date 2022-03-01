@@ -16,6 +16,7 @@ class SearchCell: UITableViewCell {
     
     @IBAction func favButtonAction(_ sender: Any) {        
         print("Marking as fav!")
+        //comment
     }
     
     
