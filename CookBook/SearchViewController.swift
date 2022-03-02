@@ -12,8 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var tableView: UITableView!
     var recipeData = [[String: Any?]]() //array of dictionaries
-    var newData = [[String: Any]]()
-    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=1&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
+    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=20&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
 //MARK: VIEWDIDLOAD
     
 
@@ -54,18 +53,23 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK:TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print("how many recipes in table: \(recipeData.count)")
         
         return recipeData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
+        
+        //one recipe for one cell
         let recipe = recipeData[indexPath.row]
         print("Number of recipes in tableview: ", recipeData.count)
         
         //getting title
         let title = recipe["title"] as? String
        
+        
+        //getting image
         guard let image = (recipe["image"] as? String) else { return cell } //exit function if empty
         cell.titleLabel!.text = title
         
