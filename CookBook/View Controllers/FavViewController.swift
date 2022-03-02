@@ -81,22 +81,19 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
         
-        
-        // Pass the selected object to the new view controller.
+        //we need to send data to the recipe details from this fav recipe selected by the user
+    
+        //find the selected recipe
+        let cell = sender as! UITableViewCell //cell tapped on
+        let indexPath = tableView.indexPath(for: cell)! //gets path from cell
+        let recipe = frecipes[indexPath.row] as! PFObject //access the array
 
+        //pass the selected recipe to the details view controller
+        let detailsViewController = segue.destination as! RecipeDetailsViewController
+        detailsViewController.favRecipe = recipe //passes my dic to the new screen
 
-//        //find the selected recipe
-//        let cell = sender as! UITableViewCell //cell tapped on
-//        let indexPath = tableView.indexPath(for: cell)! //gets path from cell
-//        let recipe = frecipes[indexPath.row] as! [String : Any] //access the array
-//
-//        //pass the selected recipe to the details view controller
-//        let detailsViewController = segue.destination as! RecipeDetailsViewController
-//        detailsViewController.recipe = recipe //passes my dic to the new screen
-//
-//        tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
+        tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
         
         
     }

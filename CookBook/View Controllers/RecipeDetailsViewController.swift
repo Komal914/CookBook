@@ -28,6 +28,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     
     var recipe: [String: Any]? //now only a dictionary, not array of dic
+    var favRecipe: PFObject?
     var audioPlayer: AVAudioPlayer?
     var favorited:Bool = false
     let imageFilled = UIImage(named: "favor-icon-red")
