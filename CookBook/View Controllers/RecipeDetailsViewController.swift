@@ -108,6 +108,8 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         else{
             favRecipeButton.setImage(imageUnfilled, for: UIControl.State.normal)
         }
+        //MARK: This is where our favorite recipe PF Object is, we need to update the labels according now 
+        print(favRecipe)
     }
 
 
@@ -134,6 +136,12 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         let oldInstructions = recipe!["instructions"] as? String
         let newInstructions = oldInstructions?.trimHTMLTags()
         instructions!.text = newInstructions
+        
+       
+        
+    
+        
+        
         }
     }
 

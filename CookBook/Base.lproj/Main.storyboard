@@ -119,29 +119,29 @@
             <objects>
                 <viewController id="7RC-Fk-Dlb" customClass="RecipeDetailsViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p2X-R4-Yex">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="917"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt7-TC-Ngx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                <rect key="frame" x="0.0" y="-88" width="414" height="1083"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQw-nK-Rah">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1083"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-vf-QRG">
-                                                <rect key="frame" x="10" y="594.5" width="394" height="28"/>
+                                                <rect key="frame" x="10" y="677.5" width="394" height="28"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk6-B3-0qd">
-                                                <rect key="frame" x="10" y="514.5" width="394" height="28"/>
+                                                <rect key="frame" x="10" y="597.5" width="394" height="28"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usn-TN-r6C">
-                                                <rect key="frame" x="10" y="552.5" width="394" height="22"/>
+                                                <rect key="frame" x="10" y="635.5" width="394" height="22"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
@@ -153,7 +153,7 @@
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-KU-Yx1">
-                                                <rect key="frame" x="0.0" y="90.5" width="414" height="414"/>
+                                                <rect key="frame" x="0.0" y="90.5" width="414" height="497"/>
                                                 <color key="backgroundColor" red="0.012599183369999999" green="0.01081727884" blue="0.01271874014" alpha="0.921046276" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -163,7 +163,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-lJ-hyN">
-                                                <rect key="frame" x="10" y="645" width="394" height="22"/>
+                                                <rect key="frame" x="10" y="728" width="394" height="22"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
@@ -304,7 +304,7 @@
                                         <connections>
                                             <outlet property="posterView" destination="iKk-rw-YWV" id="p83-Gf-mrm"/>
                                             <outlet property="titleLabel" destination="HtX-xb-Il0" id="Whf-4d-xF9"/>
-                                            <segue destination="7RC-Fk-Dlb" kind="show" id="Mq2-AU-fVu"/>
+                                            <segue destination="7RC-Fk-Dlb" kind="showDetail" id="Mq2-AU-fVu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
