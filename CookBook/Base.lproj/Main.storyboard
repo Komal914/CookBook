@@ -302,6 +302,7 @@
                                         <connections>
                                             <outlet property="posterView" destination="iKk-rw-YWV" id="p83-Gf-mrm"/>
                                             <outlet property="titleLabel" destination="HtX-xb-Il0" id="Whf-4d-xF9"/>
+                                            <segue destination="7RC-Fk-Dlb" kind="show" id="Mq2-AU-fVu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -360,6 +361,9 @@
             <point key="canvasLocation" x="-4374" y="131"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Mq2-AU-fVu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="favor-icon copy" width="30" height="30"/>
         <systemColor name="labelColor">

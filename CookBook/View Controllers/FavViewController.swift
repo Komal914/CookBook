@@ -81,10 +81,12 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destination.
-//        // Pass the selected object to the new view controller.
-//
-//
+        // Get the new view controller using segue.destination.
+        
+        
+        // Pass the selected object to the new view controller.
+
+
 //        //find the selected recipe
 //        let cell = sender as! UITableViewCell //cell tapped on
 //        let indexPath = tableView.indexPath(for: cell)! //gets path from cell
@@ -98,5 +100,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         
     }
+    
+    
 
 }

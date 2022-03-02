@@ -20,13 +20,11 @@
 		4B711F98264CA4F800008380 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B711F97264CA4F800008380 /* FavCell.swift */; };
 		4B745C852638E4E100F80A15 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */; };
 		4BCD8262264B85F700EC1AD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD8261264B85F700EC1AD0 /* Extension.swift */; };
-		C1C1D733298853F967C3B8AA /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1FF25B7D17A25F0A4EC1C9 /* Pods_CookBook.framework */; };
 		EED257F227CAB83F00401296 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = EED257F127CAB83F00401296 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32504B13A2221179119279AA /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
-		4B1FF25B7D17A25F0A4EC1C9 /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C05522633D7F200D53F83 /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C05552633D7F200D53F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6C05572633D7F200D53F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,28 +49,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED257F227CAB83F00401296 /* AlamofireImage in Frameworks */,
-				C1C1D733298853F967C3B8AA /* Pods_CookBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A7D6C213C7D8CEDEBA160BD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B1FF25B7D17A25F0A4EC1C9 /* Pods_CookBook.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4B6C05492633D7F200D53F83 = {
 			isa = PBXGroup;
 			children = (
 				4B6C05542633D7F200D53F83 /* CookBook */,
 				4B6C05532633D7F200D53F83 /* Products */,
 				D032B91AAC0FAFC70DAEB216 /* Pods */,
-				1A7D6C213C7D8CEDEBA160BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,19 +76,16 @@
 			isa = PBXGroup;
 			children = (
 				4B711F89264C84BA00008380 /* sounds */,
-				4B6C05552633D7F200D53F83 /* AppDelegate.swift */,
+				EE9DF77627CF2D5600846277 /* View Controllers */,
+				EE9DF77727CF2D8500846277 /* Custom Cells */,
 				4B6C05572633D7F200D53F83 /* SceneDelegate.swift */,
+				4B6C05552633D7F200D53F83 /* AppDelegate.swift */,
+				4BCD8261264B85F700EC1AD0 /* Extension.swift */,
 				4B6C055B2633D7F200D53F83 /* Main.storyboard */,
 				4B6C05612633D7F700D53F83 /* Assets.xcassets */,
 				4B6C05632633D7F700D53F83 /* LaunchScreen.storyboard */,
 				4B6C05662633D7F700D53F83 /* Info.plist */,
 				4B6C055E2633D7F200D53F83 /* CookBook.xcdatamodeld */,
-				4B6C057C2634071E00D53F83 /* SearchCell.swift */,
-				4B6C05792633E49500D53F83 /* SearchViewController.swift */,
-				4BCD8261264B85F700EC1AD0 /* Extension.swift */,
-				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
-				4B711F97264CA4F800008380 /* FavCell.swift */,
-				4B6C05752633E20300D53F83 /* FavViewController.swift */,
 			);
 			path = CookBook;
 			sourceTree = "<group>";
@@ -119,8 +104,26 @@
 				32504B13A2221179119279AA /* Pods-CookBook.debug.xcconfig */,
 				935399CA53FF81402554F26A /* Pods-CookBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE9DF77627CF2D5600846277 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C05752633E20300D53F83 /* FavViewController.swift */,
+				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
+				4B6C05792633E49500D53F83 /* SearchViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EE9DF77727CF2D8500846277 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4B711F97264CA4F800008380 /* FavCell.swift */,
+				4B6C057C2634071E00D53F83 /* SearchCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
