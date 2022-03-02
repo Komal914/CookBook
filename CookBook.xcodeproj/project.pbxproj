@@ -20,6 +20,7 @@
 		4B711F98264CA4F800008380 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B711F97264CA4F800008380 /* FavCell.swift */; };
 		4B745C852638E4E100F80A15 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */; };
 		4BCD8262264B85F700EC1AD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD8261264B85F700EC1AD0 /* Extension.swift */; };
+		EE0CCC3A27D039E30074E71C /* favRecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CCC3927D039E30074E71C /* favRecipeDetailsViewController.swift */; };
 		EED257F227CAB83F00401296 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = EED257F127CAB83F00401296 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		4BCD8261264B85F700EC1AD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		935399CA53FF81402554F26A /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
+		EE0CCC3927D039E30074E71C /* favRecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favRecipeDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +112,10 @@
 		EE9DF77627CF2D5600846277 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B6C05752633E20300D53F83 /* FavViewController.swift */,
-				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
 				4B6C05792633E49500D53F83 /* SearchViewController.swift */,
+				4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */,
+				4B6C05752633E20300D53F83 /* FavViewController.swift */,
+				EE0CCC3927D039E30074E71C /* favRecipeDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6C057A2633E49500D53F83 /* SearchViewController.swift in Sources */,
+				EE0CCC3A27D039E30074E71C /* favRecipeDetailsViewController.swift in Sources */,
 				4B711F98264CA4F800008380 /* FavCell.swift in Sources */,
 				4B6C057D2634071E00D53F83 /* SearchCell.swift in Sources */,
 				4B6C05602633D7F200D53F83 /* CookBook.xcdatamodeld in Sources */,

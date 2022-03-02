@@ -90,10 +90,11 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let recipe = frecipes[indexPath.row] as! PFObject //access the array
 
         //pass the selected recipe to the details view controller
-        let detailsViewController = segue.destination as! RecipeDetailsViewController
-        detailsViewController.favRecipe = recipe //passes my dic to the new screen
+        let detailsViewController = segue.destination as! favRecipeDetailsViewController
+        
+        //detailsViewController.favRecipe = recipe //passes my dic to the new screen
 
-        tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
+       // tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
         
         
     }
