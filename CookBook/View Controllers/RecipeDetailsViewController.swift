@@ -28,6 +28,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     
     var recipe: [String: Any]? //now only a dictionary, not array of dic
+    var favRecipe: PFObject?
     var audioPlayer: AVAudioPlayer?
     var favorited:Bool = false
     let imageFilled = UIImage(named: "favor-icon-red")
@@ -62,6 +63,9 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
             frecipe["title"] = title
             guard let image = (recipe?["image"] as? String) else { return  }
             frecipe["imageUrl"] = recipe!["image"] as? String
+            guard let oldinstructions = (recipe?["instructions"] as? String) else { return  } //now backend also has instructions for us
+            let newInstructions = oldinstructions.trimHTMLTags()
+            frecipe["instructions"] = newInstructions
             //what saves my data to parse
             frecipe.saveInBackground { (success, error) in
                 if success{
@@ -107,6 +111,9 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         else{
             favRecipeButton.setImage(imageUnfilled, for: UIControl.State.normal)
         }
+        //MARK: This is where our favorite recipe PF Object is, we need to update the labels according now
+        
+        
     }
 
 
@@ -133,6 +140,12 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         let oldInstructions = recipe!["instructions"] as? String
         let newInstructions = oldInstructions?.trimHTMLTags()
         instructions!.text = newInstructions
+        
+       
+        
+    
+        
+        
         }
     }
 
