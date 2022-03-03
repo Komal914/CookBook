@@ -25,7 +25,7 @@ This Application generates random recipes for the user to inspire users to try n
 
 * Recipe Details
    * The recipe's summary and instructions are listed for the user
-   * By clicking the heart button, the button dings and changed the grey heart to red and the recipe has been saved
+   * By clicking the heart button, the button dings and the recipe has been saved
 
 * Favorites
    * List of your favorite recipes with associated name and photo 
@@ -88,7 +88,7 @@ This Application generates random recipes for the user to inspire users to try n
              }
         }
   ```
-  After this data is loaded, once the user clicks on the recipe selected -> that recipe details are segued onto the recipe details page
+  After this data is loaded, once the user clicks on the recipe selected -> that recipe's details are segued onto the recipe details screen
 
 
   - Favorites 
@@ -117,6 +117,7 @@ drecipe.deleteInBackground() { (success, error) in
                     print("not deleted ")
                 }
 ```
+ After this data is loaded, once the user clicks on the favorited recipe  -> that recipe's details are segued onto the fav recipe details screen
 
 ## Video Walkthrough
 
