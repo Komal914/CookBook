@@ -52,14 +52,14 @@ This Application generates random recipes for the user to inspire users to try n
 
 ## Schema 
 ### Model
-#### Recipes:
+#### Recipe:
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | Recipe name      | String   |  The name of the recipe |
-   | Recipe Image     | png |  The image associated with relevant recipe|
-   | Recipe Description | string | Brief summary of the food |
-   | Recipe Instructions | string | List of instructions on how to prepare the dish |
+   | Recipe Image     | String |  The image URL associated with relevant recipe|
+   | Recipe Description | String | Brief summary of the food |
+   | Recipe Instructions | String | List of instructions on how to prepare the dish |
  
  
  
@@ -123,7 +123,8 @@ drecipe.deleteInBackground() { (success, error) in
 
 Here's a walkthrough of implemented user stories:
 
-https://user-images.githubusercontent.com/44416323/156479014-9d2aee62-f109-40be-bd4f-5a27644ff4d7.mov
+https://user-images.githubusercontent.com/44416323/156668213-a6834ad3-62de-4766-b839-67f1a7532c69.mov
+
 
 
 
