@@ -123,7 +123,9 @@ drecipe.deleteInBackground() { (success, error) in
 
 Here's a walkthrough of implemented user stories:
 
-https://user-images.githubusercontent.com/44416323/156668213-a6834ad3-62de-4766-b839-67f1a7532c69.mov
+https://user-images.githubusercontent.com/44416323/156668905-8ddc25f5-1775-438c-9e42-e4b642c00807.mov
+
+
 
 
 
