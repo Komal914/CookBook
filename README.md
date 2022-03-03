@@ -10,7 +10,7 @@
 
 ## Overview
 ### Description
-This Application generates new recipes by utilizing the spoonacular API to call random recipes for the user everytime the app is opened to inspire users to try new food. By clicking on the recipe, the user is able to view the summary and intructions for the recipe. User is able to save the recipe for later through clicking the heart button. Favorite recipes are always on the favorites tab which are stored using a custom Parse backend server hosted on Back4App. 
+This application generates new recipes by utilizing the spoonacular API to call random recipes for the user everytime the app is opened to inspire users to try new food. By clicking on the recipe, the user is able to view the summary and intructions for the recipe. User is able to save the recipe for later through clicking the heart button. Favorite recipes are always on the favorites tab which are stored using a custom Parse backend server hosted on Back4App. 
 
 
 
