@@ -28,7 +28,11 @@ This Application generates random recipes for the user. By clicking on the recip
    * By clicking the heart button, the button dings and changed the grey heart to red and the recipe has been saved
 
 * Favorites
-   * List of your favorite recipes with associated name and photo  
+   * List of your favorite recipes with associated name and photo 
+
+* Favorite Recipe Details
+   * Lists out the instructions for the fav recipe
+
 
 ### 2. Navigation
 
@@ -40,6 +44,7 @@ This Application generates random recipes for the user. By clicking on the recip
 **Flow Navigation** (Screen to Screen)
 
 * Random Recipes  -> Recipe details 
+* Favorites -> favorite recipe's instructions 
 
 
 ## Wireframe
@@ -52,7 +57,7 @@ This Application generates random recipes for the user. By clicking on the recip
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | Recipe name      | String   |  The name of the recipe |
-   | Recipe Image     | png |  The image associated with relvant recipe|
+   | Recipe Image     | png |  The image associated with relevant recipe|
    | Recipe Description | string | Brief summary of the food |
    | Recipe Instructions | string | List of instructions on how to prepare the dish |
  
