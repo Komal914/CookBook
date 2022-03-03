@@ -94,7 +94,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         detailsViewController.recipe = recipe //passes my dic to the new screen
 
-       // tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
+        tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
         
         
     }

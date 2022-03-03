@@ -42,12 +42,14 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
             UserDefaults.standard.setValue(true, forKey: "liked")
             print("liked")
         }
-        else{
-            favRecipeButton.setImage(imageUnfilled, for: UIControl.State.normal)
-            favRecipeButton.zoomIn()
-            UserDefaults.standard.setValue(false, forKey: "liked")
-            print("not liked")
-        }
+        
+        //MARK: Uncommented to keep heart always red
+//        else{
+//            favRecipeButton.setImage(imageUnfilled, for: UIControl.State.normal)
+//            favRecipeButton.zoomIn()
+//            UserDefaults.standard.setValue(false, forKey: "liked")
+//            print("not liked")
+//        }
         return favorited
     }
     
@@ -102,14 +104,16 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
 
 
     override func viewDidAppear(_ animated: Bool) {
-        print(UserDefaults.standard.bool(forKey: "liked"))
+       // print(UserDefaults.standard.bool(forKey: "liked"))
         //remembers for user if liked or not
         if(UserDefaults.standard.bool(forKey: "liked") == true)
         {
             favRecipeButton.setImage(imageFilled, for: UIControl.State.normal)
         }
+        
+        //changing the imageUnfilled -> imageFilled to always have red, no grey
         else{
-            favRecipeButton.setImage(imageUnfilled, for: UIControl.State.normal)
+            favRecipeButton.setImage(imageFilled, for: UIControl.State.normal)
         }
         //MARK: This is where our favorite recipe PF Object is, we need to update the labels according now
         
