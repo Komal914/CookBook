@@ -63,6 +63,9 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
             frecipe["title"] = title
             guard let image = (recipe?["image"] as? String) else { return  }
             frecipe["imageUrl"] = recipe!["image"] as? String
+            guard let oldinstructions = (recipe?["instructions"] as? String) else { return  } //now backend also has instructions for us
+            let newInstructions = oldinstructions.trimHTMLTags()
+            frecipe["instructions"] = newInstructions
             //what saves my data to parse
             frecipe.saveInBackground { (success, error) in
                 if success{

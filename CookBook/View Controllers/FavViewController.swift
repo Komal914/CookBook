@@ -92,7 +92,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         //pass the selected recipe to the details view controller
         let detailsViewController = segue.destination as! favRecipeDetailsViewController
         
-        //detailsViewController.favRecipe = recipe //passes my dic to the new screen
+        detailsViewController.recipe = recipe //passes my dic to the new screen
 
        // tableView.deselectRow(at: indexPath, animated: true) //after user comes back to home, cell is deselected
         
