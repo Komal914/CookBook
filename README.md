@@ -10,7 +10,7 @@
 
 ## Overview
 ### Description
-This Application generates random recipes for the user. By clicking on the recipe, the user is able to view the summary and intructions for the recipe. User is able to save the recipe through clicking the heart button. Favorite recipes can be found on the favorites tab which are stored by using a custom Parse backend server hosted on Back4App.
+This Application generates random recipes for the user to inspire users to try new recipes. By clicking on the recipe, the user is able to view the summary and intructions for the recipe. User is able to save the recipe through clicking the heart button. Favorite recipes can be found on the favorites tab which are stored by using a custom Parse backend server hosted on Back4App. 
 
 
 
