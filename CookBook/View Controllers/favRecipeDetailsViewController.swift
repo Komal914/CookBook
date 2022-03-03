@@ -18,8 +18,8 @@ class favRecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     var recipe: PFObject!
     
     override func viewWillLayoutSubviews(){
-        super.viewWillLayoutSubviews()
-        scrollView.contentSize = CGSize(width: 375, height: 1000)
+       // super.viewWillLayoutSubviews()
+        //scrollView.contentSize = CGSize(width: 375, height: 1000)
     }
     
     
