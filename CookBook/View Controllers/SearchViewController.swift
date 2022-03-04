@@ -38,6 +38,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
 //                 print("Recipes in dictionary:", self.recipeData)
                     //api info downloaded
+                 
                     
                 self.tableView.reloadData() //refresh data
 
@@ -63,6 +64,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //one recipe for one cell
         let recipe = recipeData[indexPath.row]
+        
         print("Number of recipes in tableview: ", recipeData.count)
         
         //getting title
