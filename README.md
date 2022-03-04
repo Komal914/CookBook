@@ -1,17 +1,23 @@
 # CookBook
-##### Tags: `iOS` `REST API` `Spoonacular` `Parse` `Back4App` `alamoFireImage` 
+##### Tags: `iOS` `UIKit` `REST API` `Spoonacular` `Parse` `Back4App` `alamoFireImage` 
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframe](#Wireframe)
-2. [Schema](#Schema)
-3. [Video Walkthrough](#Video-Walkthrough)
+2. [Video Walkthrough](#Video-Walkthrough)
+3. [Wireframe](#Wireframe)
+4. [Product Spec](#Product-Spec)
+5. [Schema](#Schema)
+
 
 ## Overview
 ### Description
 This application generates new recipes by utilizing the spoonacular API to call random recipes for the user everytime the app is opened to inspire users to try new food. By clicking on the recipe, the user is able to view the summary and intructions for the recipe. User is able to save the recipe for later through clicking the heart button. Favorite recipes are always on the favorites tab which are stored using a custom Parse backend server hosted on Back4App. 
 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+https://user-images.githubusercontent.com/44416323/156668905-8ddc25f5-1775-438c-9e42-e4b642c00807.mov
 
 
 ## Product Spec
@@ -118,13 +124,6 @@ drecipe.deleteInBackground() { (success, error) in
                 }
 ```
  After this data is loaded, once the user clicks on the favorited recipe  -> that recipe's details are segued onto the fav recipe details screen
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-https://user-images.githubusercontent.com/44416323/156668905-8ddc25f5-1775-438c-9e42-e4b642c00807.mov
-
 
 
 
