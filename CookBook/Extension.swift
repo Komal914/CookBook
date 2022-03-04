@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 
 extension String {
+    
+    func emptyAsNil() -> String? {
+        self.isEmpty ? nil : self
+    }
+    
+    
     public func trimHTMLTags() -> String? {
         guard let htmlStringData = self.data(using: String.Encoding.utf8) else {
             return nil
