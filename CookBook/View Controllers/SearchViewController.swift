@@ -12,7 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var tableView: UITableView!
     var recipeData = [[String: Any?]]() //array of dictionaries
-    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=20&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
+    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=1&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
 //MARK: VIEWDIDLOAD
     
 
