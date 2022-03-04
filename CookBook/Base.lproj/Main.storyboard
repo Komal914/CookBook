@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="-5771" y="-593"/>
         </scene>
-        <!--Home-->
+        <!--Random Recipes-->
         <scene sceneID="ceq-oq-hZq">
             <objects>
                 <viewController id="eFy-eI-66y" customClass="SearchViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                             <constraint firstItem="Aog-r3-QIm" firstAttribute="trailing" secondItem="gfI-fS-eDT" secondAttribute="trailing" id="tD3-cZ-kJ5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="5uK-r8-kwG"/>
+                    <navigationItem key="navigationItem" title="Random Recipes" id="5uK-r8-kwG"/>
                     <connections>
                         <outlet property="tableView" destination="Aog-r3-QIm" id="1un-Lf-F8q"/>
                     </connections>
@@ -344,12 +344,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfp-gO-Yl7">
                                                 <rect key="frame" x="20" y="40" width="374" height="25"/>
+                                                <color key="backgroundColor" red="0.96841138601303101" green="0.0" blue="0.65149128014211422" alpha="0.25555378401360546" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="25"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Instructions " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-he-DV8">
-                                                <rect key="frame" x="20" y="83" width="118" height="22"/>
+                                                <rect key="frame" x="20" y="83" width="374" height="22"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -362,6 +363,7 @@
                                             <constraint firstItem="WcG-he-DV8" firstAttribute="leading" secondItem="Pfu-md-rWq" secondAttribute="leading" constant="20" id="HxW-VI-abf"/>
                                             <constraint firstItem="WcG-he-DV8" firstAttribute="top" secondItem="Vfp-gO-Yl7" secondAttribute="bottom" constant="18" id="IU6-5x-k4K"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WcG-he-DV8" secondAttribute="trailing" constant="20" symbolic="YES" id="eku-xu-UmQ"/>
+                                            <constraint firstItem="WcG-he-DV8" firstAttribute="centerX" secondItem="Pfu-md-rWq" secondAttribute="centerX" id="juS-TJ-al2"/>
                                             <constraint firstItem="Vfp-gO-Yl7" firstAttribute="leading" secondItem="Pfu-md-rWq" secondAttribute="leading" constant="20" id="rWC-0K-rEA"/>
                                         </constraints>
                                     </view>
@@ -400,7 +402,7 @@
         <scene sceneID="W0z-vi-juR">
             <objects>
                 <navigationController id="GuH-MC-gNw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="iZs-cP-gdN"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="iZs-cP-gdN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAh-LP-8AK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
