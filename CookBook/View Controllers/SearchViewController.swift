@@ -13,7 +13,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     var recipeData = [[String: Any?]]() //array of dictionaries
     var filteredRecipeData = [[String:Any?]]()
-    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=1&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
+    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=20&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
 //MARK: VIEWDIDLOAD
     
 
@@ -59,19 +59,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print("how many recipes in table: \(recipeData.count)")
         
-        return recipeData.count
+        return filteredRecipeData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
         
-        print("Printing...filtered recipe......")
-        print(filteredRecipeData)
+//        print("Printing...filtered recipe......")
+//        print(filteredRecipeData)
         
         //one recipe for one cell
-        let recipe = recipeData[indexPath.row]
+        let recipe = filteredRecipeData[indexPath.row]
         
-        print("Number of recipes in tableview: ", recipeData.count)
+        print("Number of recipes in tableview: ", filteredRecipeData.count)
         
         //getting title
         let title = recipe["title"] as? String
