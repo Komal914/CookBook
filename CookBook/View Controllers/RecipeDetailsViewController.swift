@@ -31,7 +31,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     var favRecipe: PFObject?
     var audioPlayer: AVAudioPlayer?
     var favorited:Bool = false
-    let imageFilled = UIImage(named: "favor-icon-red")
+    let imageFilled = UIImage(named: "heart (1)")
     let imageUnfilled = UIImage(named: "favor-icon copy")
     
     func setFavorited(_ isFavorited:Bool) -> Bool{
