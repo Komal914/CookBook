@@ -12,6 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var tableView: UITableView!
     var recipeData = [[String: Any?]]() //array of dictionaries
+    var filteredRecipeData = [[String:Any?]]()
     let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=1&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
 //MARK: VIEWDIDLOAD
     
@@ -38,6 +39,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
 //                 print("Recipes in dictionary:", self.recipeData)
                     //api info downloaded
+                
+                 self.filteredRecipeData = self.recipeData.flatMap { $0 }
                  
                     
                 self.tableView.reloadData() //refresh data
@@ -61,6 +64,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
+        
+        print("Printing...filtered recipe......")
+        print(filteredRecipeData)
         
         //one recipe for one cell
         let recipe = recipeData[indexPath.row]
