@@ -12,6 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var tableView: UITableView!
     var recipeData = [[String: Any?]]() //array of dictionaries
+    var filteredRecipeData = [[String:Any?]]()
     let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=20&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
 //MARK: VIEWDIDLOAD
     
@@ -38,6 +39,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
 //                 print("Recipes in dictionary:", self.recipeData)
                     //api info downloaded
+                
+                 self.filteredRecipeData = self.recipeData.flatMap { $0 }
                  
                     
                 self.tableView.reloadData() //refresh data
@@ -56,16 +59,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print("how many recipes in table: \(recipeData.count)")
         
-        return recipeData.count
+        return filteredRecipeData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
         
-        //one recipe for one cell
-        let recipe = recipeData[indexPath.row]
+//        print("Printing...filtered recipe......")
+//        print(filteredRecipeData)
         
-        print("Number of recipes in tableview: ", recipeData.count)
+        //one recipe for one cell
+        let recipe = filteredRecipeData[indexPath.row]
+        
+        print("Number of recipes in tableview: ", filteredRecipeData.count)
         
         //getting title
         let title = recipe["title"] as? String
