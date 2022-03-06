@@ -4,9 +4,10 @@
 ## Table of Contents
 1. [Overview](#Overview)
 2. [Video Walkthrough](#Video-Walkthrough)
-3. [Wireframe](#Wireframe)
-4. [Product Spec](#Product-Spec)
-5. [Schema](#Schema)
+3. [How to Run](#How-to-Run)
+4. [Wireframe](#Wireframe)
+5. [Product Spec](#Product-Spec)
+6. [Schema](#Schema)
 
 
 ## Overview
@@ -18,6 +19,20 @@ This application generates new recipes by utilizing the spoonacular API to call 
 Here's a walkthrough of implemented user stories:
 
 https://user-images.githubusercontent.com/44416323/156668905-8ddc25f5-1775-438c-9e42-e4b642c00807.mov
+
+## How-to-Run
+
+[Required]Download Xcode
+1. Open Terminal
+2. Change directory to where you want to clone the file
+3. Type `git clone https://github.com/Komal914/CookBook.git`
+4. Open the cloned repository in Xcode and press CMD + R to run the app
+
+OR download the zip file
+
+Double click the file "Cookbook.xcodeproj"
+Press two keys simultaneously: CMD + R to run the app
+
 
 
 ## Product Spec
