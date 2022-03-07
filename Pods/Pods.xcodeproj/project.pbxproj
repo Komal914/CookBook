@@ -386,6 +386,7 @@
 		EAC6E1D7AC755560EACDB29DFFADECEF /* PFObjectFileCodingLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 743ADFA875E61326F7A81A5656CBC2FB /* PFObjectFileCodingLogic.m */; };
 		EDB8B4D1A843E1A3CAB4331257C542D6 /* PFPin.h in Headers */ = {isa = PBXBuildFile; fileRef = 10D9E39BE7A7F74666C00FCD74BD69F2 /* PFPin.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EDBA55CD6077D1FAE27839FCAED9CED9 /* PFRESTFileCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A16765A709B0C950FBC41F1B5A8328 /* PFRESTFileCommand.m */; };
+		EEBE36E727D5D75000B05993 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EEBE36E627D5D75000B05993 /* Lottie */; };
 		EF4A2A728B2C34D86495F7A70D69DA5A /* PFObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E426D08EEA091AF4ED0FA72E9E2B2 /* PFObject.m */; };
 		F161EE079FD6C84B4C84A96CF2AF3C9F /* PFCommandCache_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D7AD6201DD1C07A9F8E52A558FCA532 /* PFCommandCache_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F1DFCD090B8E13F5449672B13F9E6E4D /* PFOfflineStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C1DC1C2A966387093ED2BF289ECD9E /* PFOfflineStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -568,7 +569,7 @@
 		473A51B0397F3CD4A5A249A086882F1E /* PFMutableObjectState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableObjectState.h; path = Parse/Parse/Internal/Object/State/PFMutableObjectState.h; sourceTree = "<group>"; };
 		48926409D0FF4284E44B201FA87E9DE0 /* Pods-CookBook-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CookBook-umbrella.h"; sourceTree = "<group>"; };
 		4944D5526403BC08117B5FD677DB81C4 /* PFKeyValueCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFKeyValueCache.h; path = Parse/Parse/Internal/KeyValueCache/PFKeyValueCache.h; sourceTree = "<group>"; };
-		49F5418E8A4E503749A35F9EE39D11A8 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
+		49F5418E8A4E503749A35F9EE39D11A8 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
 		4A484B02E65D39BCFA9311F06CBF0D8D /* PFObjectFileCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectFileCoder.h; path = Parse/Parse/Internal/Object/Coder/File/PFObjectFileCoder.h; sourceTree = "<group>"; };
 		4A948EBBFF2444CDFBE5C0C50E5DBAC7 /* PFURLSession_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSession_Private.h; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/PFURLSession_Private.h; sourceTree = "<group>"; };
 		4B1AF2713E99F8E2B783A2B8754028B0 /* PFQueryUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryUtilities.m; path = Parse/Parse/Internal/Query/Utilities/PFQueryUtilities.m; sourceTree = "<group>"; };
@@ -717,7 +718,7 @@
 		9C8FA6999AB5E9C65946D29EC6A095DD /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse/Parse/PFUser.h; sourceTree = "<group>"; };
 		9CD09372F1176401B063B6558B58650D /* PFAnalytics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAnalytics.m; path = Parse/Parse/PFAnalytics.m; sourceTree = "<group>"; };
 		9D3658CEB7EB90C4F8C9FE714095BCFF /* PFCommandRunningConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCommandRunningConstants.m; path = Parse/Parse/Internal/Commands/CommandRunner/PFCommandRunningConstants.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F7A0C6DEC72A4D859239958F7B3696D /* PFSessionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSessionUtilities.h; path = Parse/Parse/Internal/Session/Utilities/PFSessionUtilities.h; sourceTree = "<group>"; };
 		A021FC336F0377103160FF79400B01BB /* PFPropertyInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPropertyInfo.m; path = Parse/Parse/Internal/PropertyInfo/PFPropertyInfo.m; sourceTree = "<group>"; };
 		A043784428D0BEA491E3F01B8F4F686F /* PFPushController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushController.h; path = Parse/Parse/Internal/Push/Controller/PFPushController.h; sourceTree = "<group>"; };
@@ -889,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E154D2128F56E1C14FD6FD57994E93 /* Foundation.framework in Frameworks */,
+				EEBE36E727D5D75000B05993 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,7 +1364,6 @@
 				F0B23D144BCC97B16256E714C59BCE8D /* Support Files */,
 				2B1F807732A18E2F6DF9490BC0FA7B0F /* Tasks */,
 			);
-			name = Bolts;
 			path = Bolts;
 			sourceTree = "<group>";
 		};
@@ -1441,7 +1442,6 @@
 				314934657C3DEC46192BDCD92EFE910D /* Core */,
 				8BA18414E4921946B00C78C086336B60 /* Support Files */,
 			);
-			name = Parse;
 			path = Parse;
 			sourceTree = "<group>";
 		};
@@ -1744,6 +1744,9 @@
 			dependencies = (
 			);
 			name = Bolts;
+			packageProductDependencies = (
+				EEBE36E627D5D75000B05993 /* Lottie */,
+			);
 			productName = Bolts;
 			productReference = F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts */;
 			productType = "com.apple.product-type.framework";
@@ -1823,6 +1826,9 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			packageReferences = (
+				EEBE36E527D5D75000B05993 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 875712EDDBC44274E902CCD65E423CAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -2514,6 +2520,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEBE36E527D5D75000B05993 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEBE36E627D5D75000B05993 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEBE36E527D5D75000B05993 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Lottie
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var managedObjectContext: NSManagedObjectContext!
