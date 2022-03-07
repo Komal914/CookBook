@@ -119,41 +119,41 @@
             <objects>
                 <viewController id="7RC-Fk-Dlb" customClass="RecipeDetailsViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p2X-R4-Yex">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="917"/>
+                        <rect key="frame" x="0.0" y="0.0" width="407" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt7-TC-Ngx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="407" height="917"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQw-nK-Rah">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="407" height="917"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-vf-QRG">
-                                                <rect key="frame" x="10" y="594.5" width="394" height="28"/>
+                                                <rect key="frame" x="10" y="511.5" width="387" height="28"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk6-B3-0qd">
-                                                <rect key="frame" x="10" y="514.5" width="394" height="28"/>
+                                                <rect key="frame" x="10" y="431.5" width="387" height="28"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usn-TN-r6C">
-                                                <rect key="frame" x="10" y="552.5" width="394" height="22"/>
+                                                <rect key="frame" x="10" y="469.5" width="387" height="22"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gc-5I-4rh">
-                                                <rect key="frame" x="10" y="40" width="394" height="28"/>
+                                                <rect key="frame" x="10" y="40" width="387" height="28"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-KU-Yx1">
-                                                <rect key="frame" x="0.0" y="90.5" width="414" height="414"/>
+                                                <rect key="frame" x="0.0" y="90.5" width="407" height="331"/>
                                                 <color key="backgroundColor" red="0.012599183369999999" green="0.01081727884" blue="0.01271874014" alpha="0.921046276" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -163,7 +163,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-lJ-hyN">
-                                                <rect key="frame" x="10" y="645" width="394" height="22"/>
+                                                <rect key="frame" x="10" y="562" width="387" height="22"/>
                                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
@@ -217,15 +217,15 @@
                     <navigationItem key="navigationItem" title="Recipe Details" id="3D1-oJ-agY">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xdi-2j-UGo">
                             <view key="customView" contentMode="scaleToFill" id="jeQ-hJ-r6z">
-                                <rect key="frame" x="302" y="5.5" width="92" height="33"/>
+                                <rect key="frame" x="295" y="5.5" width="92" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6h-4d-pw0">
-                                        <rect key="frame" x="31" y="1" width="30" height="30"/>
+                                        <rect key="frame" x="58" y="0.0" width="34" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.36078431370000003" green="0.061359457669999999" blue="0.052552253010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="favor-icon-red">
+                                        <state key="normal" image="heart (1)">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -234,11 +234,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="407" height="917"/>
                     <connections>
                         <outlet property="favRecipeButton" destination="C6h-4d-pw0" id="Egk-Th-e5V"/>
                         <outlet property="instructions" destination="xfj-lJ-hyN" id="Jua-J9-W4o"/>
@@ -250,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY3-im-jE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6062.3188405797109" y="970.98214285714278"/>
+            <point key="canvasLocation" x="-6067.3913043478269" y="969.97767857142856"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="SeS-2z-vnd">
@@ -439,8 +438,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favor-icon-red" width="30" height="30"/>
         <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="heart (1)" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
