@@ -21,6 +21,7 @@
 		4B745C852638E4E100F80A15 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B745C842638E4E100F80A15 /* RecipeDetailsViewController.swift */; };
 		4BCD8262264B85F700EC1AD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD8261264B85F700EC1AD0 /* Extension.swift */; };
 		EE0CCC3A27D039E30074E71C /* favRecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CCC3927D039E30074E71C /* favRecipeDetailsViewController.swift */; };
+		EEBE36E927D5DF0400B05993 /* ladyThinking.json in Resources */ = {isa = PBXBuildFile; fileRef = EEBE36E827D5DF0400B05993 /* ladyThinking.json */; };
 		EED257F227CAB83F00401296 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = EED257F127CAB83F00401296 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		4BCD8261264B85F700EC1AD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		935399CA53FF81402554F26A /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		EE0CCC3927D039E30074E71C /* favRecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favRecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		EEBE36E827D5DF0400B05993 /* ladyThinking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ladyThinking.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		4B6C05542633D7F200D53F83 /* CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				EEBE36E827D5DF0400B05993 /* ladyThinking.json */,
 				4B711F89264C84BA00008380 /* sounds */,
 				EE9DF77627CF2D5600846277 /* View Controllers */,
 				EE9DF77727CF2D8500846277 /* Custom Cells */,
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B711F8B264C84EF00008380 /* dingSound.mp3 in Resources */,
+				EEBE36E927D5DF0400B05993 /* ladyThinking.json in Resources */,
 				4B6C05652633D7F700D53F83 /* LaunchScreen.storyboard in Resources */,
 				4B6C05622633D7F700D53F83 /* Assets.xcassets in Resources */,
 				4B6C055D2633D7F200D53F83 /* Main.storyboard in Resources */,

@@ -17,15 +17,30 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=20&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
 //MARK: VIEWDIDLOAD
     
+    let animationView = AnimationView()
+    
+    private func setupAnimation() {
+        animationView.animation = Animation.named("ladyThinking")
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.backgroundColor = .red
+        animationView.play()
+        view.addSubview(animationView)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+   
+//MARK: ADDING LOTTIE
+        
+        //setupAnimation()
+        
         tableView.dataSource = self
         tableView.delegate = self
         //filteredRecipes = recipes
         
-        //MARK:API Request
+//MARK: API REQUEST
         
         let request = URLRequest(url: RandomUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
