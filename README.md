@@ -1,5 +1,6 @@
 # CookBook
 ##### Tags: `iOS` `UIKit` `REST API` `Spoonacular` `Parse` `Back4App` `alamoFireImage` `lottie`
+Source: [https://hackmd.io/@PN7C6hJWRlarnh710w4j-w/H1o_moSb5](https://)
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -8,6 +9,7 @@
 4. [Wireframe](#Wireframe)
 5. [Product Spec](#Product-Spec)
 6. [Schema](#Schema)
+7. [Upcoming](#Upcoming)
 
 
 ## Overview
@@ -139,6 +141,17 @@ drecipe.deleteInBackground() { (success, error) in
                 }
 ```
  After this data is loaded, once the user clicks on the favorited recipe  -> that recipe's details are segued onto the fav recipe details screen
+ 
+ 
+## Upcoming
+
+### UI Updates and more functionality 
+* Search bar on random recipes screen to filter the feed
+* Add "Random" button to refresh the feed of recipes or implement pull refresh 
+* Lottie Animations -> [https://lottiefiles.com/](https://) 
+   * Increase app reactivity to user interaction 
+   
+
 
 
 
