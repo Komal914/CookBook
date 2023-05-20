@@ -43,6 +43,8 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavCell") as! FavCell
         let recipe = frecipes[indexPath.row]
         
+        cell.selectionStyle = .none
+        
         cell.titleLabel.text = recipe["title"] as! String
         
         let imageString = (recipe["imageUrl"] as? String)!

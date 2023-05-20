@@ -42,6 +42,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
 //MARK: API REQUEST
         
+        
+        
         let request = URLRequest(url: RandomUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -80,6 +82,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
+        
+        cell.selectionStyle = .none
         
 //        print("Printing...filtered recipe......")
 //        print(filteredRecipeData)
