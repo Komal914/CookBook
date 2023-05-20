@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDK-SF-DVI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDK-SF-DVI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,7 +50,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="383" id="k0a-Yq-Qu9" customClass="SearchCell" customModule="CookBook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="383"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="383"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k0a-Yq-Qu9" id="7Ia-i8-H1T">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="383"/>
@@ -58,7 +58,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhb-sY-Atm">
                                                     <rect key="frame" x="30" y="15" width="354" height="69"/>
-                                                    <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -123,37 +123,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt7-TC-Ngx">
-                                <rect key="frame" x="0.0" y="0.0" width="407" height="917"/>
+                                <rect key="frame" x="0.0" y="4" width="407" height="913"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQw-nK-Rah">
-                                        <rect key="frame" x="0.0" y="0.0" width="407" height="917"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="407" height="913"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-vf-QRG">
-                                                <rect key="frame" x="10" y="511.5" width="387" height="28"/>
-                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
+                                                <rect key="frame" x="10" y="510.5" width="387" height="26.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk6-B3-0qd">
-                                                <rect key="frame" x="10" y="431.5" width="387" height="28"/>
-                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
+                                                <rect key="frame" x="10" y="433.5" width="387" height="26.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usn-TN-r6C">
-                                                <rect key="frame" x="10" y="469.5" width="387" height="22"/>
-                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Summary" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usn-TN-r6C">
+                                                <rect key="frame" x="20" y="470" width="377" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gc-5I-4rh">
-                                                <rect key="frame" x="10" y="40" width="387" height="28"/>
-                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="28"/>
-                                                <color key="textColor" systemColor="systemPinkColor"/>
+                                                <rect key="frame" x="10" y="20" width="387" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-KU-Yx1">
-                                                <rect key="frame" x="0.0" y="90.5" width="407" height="331"/>
+                                                <rect key="frame" x="0.0" y="83.5" width="407" height="330"/>
                                                 <color key="backgroundColor" red="0.012599183369999999" green="0.01081727884" blue="0.01271874014" alpha="0.921046276" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -162,30 +162,30 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-lJ-hyN">
-                                                <rect key="frame" x="10" y="562" width="387" height="22"/>
-                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-lJ-hyN">
+                                                <rect key="frame" x="20" y="559.5" width="377" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Uk6-B3-0qd" firstAttribute="top" secondItem="w8O-KU-Yx1" secondAttribute="bottom" constant="10" id="0ZB-4i-NIv"/>
+                                            <constraint firstItem="Uk6-B3-0qd" firstAttribute="top" secondItem="w8O-KU-Yx1" secondAttribute="bottom" constant="20" id="0ZB-4i-NIv"/>
                                             <constraint firstItem="usn-TN-r6C" firstAttribute="top" secondItem="Uk6-B3-0qd" secondAttribute="bottom" constant="10" id="Ddy-fR-rmU"/>
                                             <constraint firstItem="w8O-KU-Yx1" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" id="FB9-Kh-0uj"/>
-                                            <constraint firstItem="0Gc-5I-4rh" firstAttribute="top" secondItem="dQw-nK-Rah" secondAttribute="top" constant="40" id="J4o-4w-LQb"/>
+                                            <constraint firstItem="0Gc-5I-4rh" firstAttribute="top" secondItem="dQw-nK-Rah" secondAttribute="top" constant="20" id="J4o-4w-LQb"/>
                                             <constraint firstItem="0Gc-5I-4rh" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" constant="10" id="LtF-bk-YhX"/>
                                             <constraint firstItem="w8O-KU-Yx1" firstAttribute="top" secondItem="0Gc-5I-4rh" secondAttribute="bottom" constant="22.5" id="Mfr-uR-cRn"/>
                                             <constraint firstAttribute="trailing" secondItem="Bip-vf-QRG" secondAttribute="trailing" constant="10" id="R7N-Qw-1fG"/>
                                             <constraint firstAttribute="trailing" secondItem="usn-TN-r6C" secondAttribute="trailing" constant="10" id="Thg-qi-x3p"/>
                                             <constraint firstItem="Uk6-B3-0qd" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" constant="10" id="VKY-Hx-wET"/>
                                             <constraint firstAttribute="bottom" secondItem="xfj-lJ-hyN" secondAttribute="bottom" constant="333" id="cS2-AH-dvK"/>
-                                            <constraint firstItem="xfj-lJ-hyN" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" constant="10" id="chS-xy-Pga"/>
+                                            <constraint firstItem="xfj-lJ-hyN" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" constant="20" id="chS-xy-Pga"/>
                                             <constraint firstItem="Bip-vf-QRG" firstAttribute="top" secondItem="usn-TN-r6C" secondAttribute="bottom" constant="20" id="eKX-uD-xKQ"/>
                                             <constraint firstAttribute="trailing" secondItem="Uk6-B3-0qd" secondAttribute="trailing" constant="10" id="eUW-bc-ACw"/>
                                             <constraint firstItem="xfj-lJ-hyN" firstAttribute="top" secondItem="Bip-vf-QRG" secondAttribute="bottom" constant="22.5" id="fzl-EA-RcS"/>
-                                            <constraint firstItem="usn-TN-r6C" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" constant="10" id="jXr-tk-CNl"/>
+                                            <constraint firstItem="usn-TN-r6C" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" constant="20" id="jXr-tk-CNl"/>
                                             <constraint firstAttribute="trailing" secondItem="xfj-lJ-hyN" secondAttribute="trailing" constant="10" id="sJq-Rv-Wvg"/>
                                             <constraint firstItem="Bip-vf-QRG" firstAttribute="leading" secondItem="dQw-nK-Rah" secondAttribute="leading" constant="10" id="uVB-Bg-zkV"/>
                                             <constraint firstAttribute="trailing" secondItem="0Gc-5I-4rh" secondAttribute="trailing" constant="10" id="xNG-kH-4Du"/>
@@ -217,15 +217,15 @@
                     <navigationItem key="navigationItem" title="Recipe Details" id="3D1-oJ-agY">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xdi-2j-UGo">
                             <view key="customView" contentMode="scaleToFill" id="jeQ-hJ-r6z">
-                                <rect key="frame" x="295" y="5.5" width="92" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="285" y="4" width="102" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6h-4d-pw0">
-                                        <rect key="frame" x="58" y="0.0" width="34" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="68" y="0.0" width="26" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.36078431370000003" green="0.061359457669999999" blue="0.052552253010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="heart (1)">
+                                        <state key="normal" image="heart.fill" catalog="system">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -264,7 +264,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavCell" rowHeight="383" id="Iwp-gC-wuA" customClass="FavCell" customModule="CookBook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="383"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="383"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iwp-gC-wuA" id="l8h-Kd-QBj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="383"/>
@@ -303,7 +303,7 @@
                                         <connections>
                                             <outlet property="posterView" destination="iKk-rw-YWV" id="p83-Gf-mrm"/>
                                             <outlet property="titleLabel" destination="HtX-xb-Il0" id="Whf-4d-xF9"/>
-                                            <segue destination="PkU-B1-dqm" kind="presentation" id="SNA-FX-Vwj"/>
+                                            <segue destination="PkU-B1-dqm" kind="presentation" modalPresentationStyle="automatic" modalTransitionStyle="crossDissolve" id="SNA-FX-Vwj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -331,8 +331,8 @@
         <scene sceneID="yEK-0P-7ch">
             <objects>
                 <viewController id="PkU-B1-dqm" customClass="favRecipeDetailsViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zZp-jG-w30">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zZp-jG-w30">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uur-Ws-BBE">
@@ -341,16 +341,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfu-md-rWq">
                                         <rect key="frame" x="0.0" y="54" width="158" height="842"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfp-gO-Yl7">
-                                                <rect key="frame" x="10" y="10" width="138" height="25"/>
-                                                <color key="backgroundColor" red="0.96841138601303101" green="0.0" blue="0.65149128014211422" alpha="0.25555378401360546" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfp-gO-Yl7">
+                                                <rect key="frame" x="10" y="10" width="138" height="41"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Instructions " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-he-DV8">
-                                                <rect key="frame" x="20" y="55" width="118" height="22"/>
-                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Instructions " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-he-DV8">
+                                                <rect key="frame" x="20" y="71" width="118" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -391,6 +391,7 @@
                             <constraint firstAttribute="bottom" secondItem="uur-Ws-BBE" secondAttribute="bottom" constant="-54" id="xIT-U5-pV9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IrY-sO-eU7"/>
                     <connections>
                         <outlet property="instructionsLabel" destination="WcG-he-DV8" id="Ovl-hG-LiH"/>
                         <outlet property="scrollView" destination="uur-Ws-BBE" id="SWf-tE-O3Z"/>
@@ -408,7 +409,7 @@
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAh-LP-8AK">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -425,7 +426,7 @@
                 <navigationController id="wNE-hU-wYh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="7J7-zb-Min"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JIh-0Z-T79">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -437,11 +438,12 @@
             <point key="canvasLocation" x="-4374" y="131"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="folder" catalog="system" width="128" height="97"/>
-        <image name="heart (1)" width="512" height="512"/>
+        <image name="folder" catalog="system" width="128" height="96"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
