@@ -17,6 +17,10 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    
     @IBOutlet weak var favRecipeButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -33,6 +37,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     var favorited:Bool = false
     let imageFilled = UIImage(named: "heart (1)")
     let imageUnfilled = UIImage(named: "favor-icon copy")
+    var favIngredients = String()
     
     func setFavorited(_ isFavorited:Bool) -> Bool{
         favorited = isFavorited //false = false
@@ -68,10 +73,12 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
             guard let oldinstructions = (recipe?["instructions"] as? String) else { return  } //now backend also has instructions for us
             let newInstructions = oldinstructions.trimHTMLTags()
             frecipe["instructions"] = newInstructions
+            frecipe["ingredients"] = favIngredients
             //what saves my data to parse
             frecipe.saveInBackground { (success, error) in
                 if success{
                     print("yay saved!")
+                    print(frecipe)
                 }
                 else{
                     print("couldnt save it smh")
@@ -141,9 +148,24 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         summaryLabel!.text = newSummary
         summaryLabel.sizeToFit()
         
+        //getting ingredients
+        let extendedIngredients = recipe?["extendedIngredients"] as? NSObject
+        
+        let ingredients = extendedIngredients?.value(forKey: "original") as? NSArray
+        
+        let listFormatter = ListFormatter()
+        let joinedIngredients = listFormatter.string(from: ingredients as! [Any])
+     
+        ingredientsLabel!.text = joinedIngredients
+        favIngredients = joinedIngredients!
+        
+        
         let oldInstructions = recipe!["instructions"] as? String
         let newInstructions = oldInstructions?.trimHTMLTags()
         instructions!.text = newInstructions
+        
+        
+        
         
        
         

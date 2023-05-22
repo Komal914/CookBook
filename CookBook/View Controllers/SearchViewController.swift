@@ -20,7 +20,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     let animationView = AnimationView()
     
     private func setupAnimation() {
-        animationView.animation = Animation.named("ladyThinking")
+        animationView.animation = Animation.named("cooking-pot")
         animationView.frame = view.bounds
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
@@ -36,9 +36,37 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //setupAnimation()
         
+        // 2. Start LottieAnimationView with animation name (without extension)
+          
+//        animationView.animation = Animation.named("cooking-pot")
+//
+//        animationView.frame = view.bounds
+//
+//          // 3. Set animation content mode
+//
+//        animationView.contentMode = .scaleAspectFit
+//
+//          // 4. Set animation loop mode
+//
+//        animationView.loopMode = .playOnce
+//
+//          // 5. Adjust animation speed
+//
+//        animationView.animationSpeed = 1.5
+//
+//        view.addSubview(animationView)
+//
+//          // 6. Play animation
+//
+//        animationView.play()
+        
+        
+        
         tableView.dataSource = self
         tableView.delegate = self
         //filteredRecipes = recipes
+        
+        
         
 //MARK: API REQUEST
         
@@ -59,8 +87,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                     //api info downloaded
                 
                  self.filteredRecipeData = self.recipeData.flatMap { $0 }
-                 
-                    
+
                 self.tableView.reloadData() //refresh data
 
              }
@@ -90,12 +117,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //one recipe for one cell
         let recipe = filteredRecipeData[indexPath.row]
-        
-        print("Number of recipes in tableview: ", filteredRecipeData.count)
-        
+
+       
         //getting title
         let title = recipe["title"] as? String
-       
         
         //getting image
         guard let image = (recipe["image"] as? String) else { return cell } //exit function if empty
