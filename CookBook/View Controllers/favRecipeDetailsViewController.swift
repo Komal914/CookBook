@@ -13,6 +13,8 @@ class favRecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var ingredientLabel: UILabel!
+    
     @IBOutlet weak var instructionsLabel: UILabel!
     
     var recipe: PFObject!
@@ -27,8 +29,14 @@ class favRecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //instructions 
         let instructions = recipe!["instructions"] as? String
         instructionsLabel.text = instructions
+        
+        let ingredients = recipe!["ingredients"] as? String
+        ingredientLabel.text = ingredients
+        
+        
 
         // Do any additional setup after loading the view.
     }
