@@ -111,6 +111,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell //recycles cells or creates new ones for table
         
         cell.selectionStyle = .none
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = UIColor.white.cgColor
+        
         
 //        print("Printing...filtered recipe......")
 //        print(filteredRecipeData)
