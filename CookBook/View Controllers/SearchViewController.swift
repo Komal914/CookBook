@@ -10,96 +10,102 @@ import CoreData
 import Lottie
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var managedObjectContext: NSManagedObjectContext!
+
     @IBOutlet weak var tableView: UITableView!
     var recipeData = [[String: Any?]]() //array of dictionaries
     var filteredRecipeData = [[String:Any?]]()
-    let RandomUrl = URL(string: "https://api.spoonacular.com/recipes/random?number=20&apiKey=5c64c21cbd3640f59a7afaf7f06f70c7")!
-//MARK: VIEWDIDLOAD
+  
+//MARK: Get API KEY
+    private var apiKey: String {
+      get {
+        // 1
+        guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
+          fatalError("Couldn't find file 'Info.plist'.")
+        }
+        // 2
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "RandomUrl") as? String else {
+          fatalError("Couldn't find key 'RandomUrl' in 'Info.plist'.")
+        }
+        return value
+      }
+    }
+
+//MARK: API REQUEST
+    private func callAPI() {
+        let RandomUrl = URL(string: apiKey)!
+        let request = URLRequest(url: RandomUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+        // This will run when the network request returns
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let data = data {
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
+                print("Recipes in dictionary!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                //api info downloaded
+                self.filteredRecipeData = self.recipeData.compactMap { $0 }
+                self.tableView.reloadData() //refresh data
+            }
+        }
+        task.resume()
+    }
     
     let animationView = AnimationView()
     
     private func setupAnimation() {
+        // 2. Start LottieAnimationView with animation name (without extension)
+        
         animationView.animation = Animation.named("cooking-pot")
-        animationView.frame = view.bounds
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop
-        animationView.backgroundColor = .red
-        animationView.play()
-        view.addSubview(animationView)
-    }
 
+        animationView.frame = view.bounds
+        
+        animationView.backgroundColor = UIColor.black
+        
+
+          // 3. Set animation content mode
+
+        animationView.contentMode = .scaleAspectFit
+
+
+          // 5. Adjust animation speed
+
+        animationView.animationSpeed = 1.8
+
+        view.addSubview(animationView)
+
+          // 6. Play animation
+
+        animationView.play(fromProgress: 0,
+                                   toProgress: 1,
+                                   loopMode: .playOnce,
+                                   completion: { (finished) in
+    
+                                    if finished {
+                                      print("Animation Complete")
+                                        self.animationView.removeFromSuperview()
+                                        
+                                    } else {
+                                      print("Animation cancelled")
+                                    }
+                })
+        
+        
+    }
+    
+//MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-//MARK: ADDING LOTTIE
-        
-        //setupAnimation()
-        
-        // 2. Start LottieAnimationView with animation name (without extension)
-          
-//        animationView.animation = Animation.named("cooking-pot")
-//
-//        animationView.frame = view.bounds
-//
-//          // 3. Set animation content mode
-//
-//        animationView.contentMode = .scaleAspectFit
-//
-//          // 4. Set animation loop mode
-//
-//        animationView.loopMode = .playOnce
-//
-//          // 5. Adjust animation speed
-//
-//        animationView.animationSpeed = 1.5
-//
-//        view.addSubview(animationView)
-//
-//          // 6. Play animation
-//
-//        animationView.play()
-        
-        
-        
+        print("Hello, \(apiKey)")
+        callAPI()
+        setupAnimation()
         tableView.dataSource = self
         tableView.delegate = self
-        //filteredRecipes = recipes
-        
-        
-        
-//MARK: API REQUEST
-        
-        
-        
-        let request = URLRequest(url: RandomUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request) { (data, response, error) in
-             // This will run when the network request returns
-             if let error = error {
-                    print(error.localizedDescription)
-             } else if let data = data {
-                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                
-                
-                self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
-//                 print("Recipes in dictionary:", self.recipeData)
-                    //api info downloaded
-                
-                 self.filteredRecipeData = self.recipeData.flatMap { $0 }
-
-                self.tableView.reloadData() //refresh data
-
-             }
-        }
-        task.resume()
     }
 
     
-    
-    
-    
-    //MARK:TableView
+//MARK: Tableview
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print("how many recipes in table: \(recipeData.count)")
@@ -114,9 +120,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIColor.white.cgColor
         
-        
-//        print("Printing...filtered recipe......")
-//        print(filteredRecipeData)
         
         //one recipe for one cell
         let recipe = filteredRecipeData[indexPath.row]
