@@ -34,6 +34,17 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.delegate = self
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0
+                
+        UIView.animate(withDuration: 0.2, delay: 0.2*Double(indexPath.row),animations: {
+            cell.alpha = 1
+        })
+        
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return frecipes.count

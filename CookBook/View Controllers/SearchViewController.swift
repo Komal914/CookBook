@@ -97,11 +97,25 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hello, \(apiKey)")
-        callAPI()
         setupAnimation()
+        callAPI()
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+@IBAction func onRefresh(_ sender: UIBarButtonItem) {
+        // Refresh table view here
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0
+                
+        UIView.animate(withDuration: 0.2, delay: 0.2*Double(indexPath.row),animations: {
+            cell.alpha = 1
+        })
+        
+        
     }
 
     

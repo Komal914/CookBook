@@ -108,6 +108,9 @@
                     <navigationItem key="navigationItem" title="Random Recipes" id="5uK-r8-kwG">
                         <barButtonItem key="rightBarButtonItem" title="Refresh " image="magnifyingglass" catalog="system" id="T9f-vZ-G0A">
                             <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="onRefresh:" destination="eFy-eI-66y" id="RIC-l3-AW5"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
