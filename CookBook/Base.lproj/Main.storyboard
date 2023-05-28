@@ -106,10 +106,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Random Recipes" id="5uK-r8-kwG">
-                        <barButtonItem key="rightBarButtonItem" title="Refresh " image="magnifyingglass" catalog="system" id="T9f-vZ-G0A">
-                            <color key="tintColor" systemColor="systemPinkColor"/>
+                        <barButtonItem key="rightBarButtonItem" image="frying.pan" catalog="system" id="T9f-vZ-G0A">
+                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
-                                <action selector="onRefresh:" destination="eFy-eI-66y" id="RIC-l3-AW5"/>
+                                <action selector="onRefresh:" destination="eFy-eI-66y" id="36a-Gx-hjx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17c-nU-KHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7081" y="911"/>
+            <point key="canvasLocation" x="-7078" y="1382"/>
         </scene>
         <!--Recipe Details-->
         <scene sceneID="GxC-MT-4fQ">
@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY3-im-jE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7075" y="1712"/>
+            <point key="canvasLocation" x="-6969" y="2862"/>
         </scene>
         <!--Favorites -->
         <scene sceneID="SeS-2z-vnd">
@@ -451,7 +451,7 @@
         <scene sceneID="W0z-vi-juR">
             <objects>
                 <navigationController id="GuH-MC-gNw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" selectedImage="folder" catalog="system" systemItem="search" id="iZs-cP-gdN">
+                    <tabBarItem key="tabBarItem" selectedImage="folder" catalog="system" systemItem="recents" id="iZs-cP-gdN">
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAh-LP-8AK">
@@ -464,7 +464,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNr-Uu-woK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7080" y="131"/>
+            <point key="canvasLocation" x="-7077" y="421"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OUS-nQ-oU9">
@@ -487,8 +487,8 @@
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="folder" catalog="system" width="128" height="96"/>
+        <image name="frying.pan" catalog="system" width="128" height="81"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

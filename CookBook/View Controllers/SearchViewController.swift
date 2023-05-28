@@ -105,6 +105,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
 @IBAction func onRefresh(_ sender: UIBarButtonItem) {
         // Refresh table view here
+    callAPI()
+    
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
