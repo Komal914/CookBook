@@ -46,6 +46,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 print("Recipes in dictionary!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 //api info downloaded
                 self.filteredRecipeData = self.recipeData.compactMap { $0 }
+                if self.tableView.numberOfRows(inSection: 0) != 0 {
+                    self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+                }
                 self.tableView.reloadData() //refresh data
             }
         }
@@ -106,7 +109,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 @IBAction func onRefresh(_ sender: UIBarButtonItem) {
         // Refresh table view here
     callAPI()
-    
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

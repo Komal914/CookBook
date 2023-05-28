@@ -25,7 +25,6 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 self.tableView.reloadData()
             }
         }
-        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -41,8 +40,6 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         UIView.animate(withDuration: 0.2, delay: 0.2*Double(indexPath.row),animations: {
             cell.alpha = 1
         })
-        
-        
     }
     
     
