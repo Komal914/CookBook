@@ -14,7 +14,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+    
         let query = PFQuery(className:"FaveRecipes")
         query.includeKey("title")
         query.limit = 300
@@ -34,6 +34,17 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.delegate = self
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0
+                
+        UIView.animate(withDuration: 0.2, delay: 0.2*Double(indexPath.row),animations: {
+            cell.alpha = 1
+        })
+        
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return frecipes.count
@@ -44,13 +55,15 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let recipe = frecipes[indexPath.row]
         
         cell.selectionStyle = .none
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = UIColor.white.cgColor
         
-        cell.titleLabel.text = recipe["title"] as! String
+        cell.titleLabel.text = recipe["title"] as? String
         
         let imageString = (recipe["imageUrl"] as? String)!
         
-        let url = NSURL(string:imageString ?? "https://spoonacular.com/recipeImages/639891-556x370.jpg")
-        let imagedata = NSData.init(contentsOf: url as! URL)
+        let url = NSURL(string:imageString )
+        let imagedata = NSData.init(contentsOf: url! as URL)
 
         if imagedata != nil {
             cell.posterView.image = UIImage(data:imagedata! as Data)
@@ -63,7 +76,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            let drecipe = frecipes[indexPath.row] as! PFObject
+            let drecipe = frecipes[indexPath.row]
             self.frecipes.remove(at: indexPath.row)
             self.tableView.deleteRows(at:[indexPath], with: .automatic )
             drecipe.deleteInBackground() { (success, error) in
@@ -89,7 +102,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         //find the selected recipe
         let cell = sender as! UITableViewCell //cell tapped on
         let indexPath = tableView.indexPath(for: cell)! //gets path from cell
-        let recipe = frecipes[indexPath.row] as! PFObject //access the array
+        let recipe = frecipes[indexPath.row] //access the array
 
         //pass the selected recipe to the details view controller
         let detailsViewController = segue.destination as! favRecipeDetailsViewController
