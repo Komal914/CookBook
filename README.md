@@ -14,7 +14,8 @@ Source: [https://hackmd.io/@PN7C6hJWRlarnh710w4j-w/H1o_moSb5](https://)
 
 ## Overview
 ### Description
-This application generates new recipes by utilizing the spoonacular API to call random recipes for the user everytime the app is opened to inspire users to try new food. By clicking on the recipe, the user is able to view the summary and intructions for the recipe. User is able to save the recipe for later through clicking the heart button. Favorite recipes are always on the favorites tab which are stored using a custom Parse backend server hosted on Back4App. 
+Cookbook is an ios application which calls random recipes for the user to explore. You can refresh the recipes by using the refresh button which will update the tableview. You are able to find more information on the recipe like the summary, ingredients used and instructions on how to recreate the dish. If you like the recipe, click the heart to save in inside the favorites tab for the future. The project urtilizes the Spoonacular API for the data, Parse back4app to store favorite recipes and lottie animations. 
+
 
 ## Video Walkthrough
 
@@ -44,17 +45,18 @@ Press two keys simultaneously: CMD + R to run the app
 
 * Random Recipe Search
    * 20 random recipes are called for the user to Browse
-   * Each recipe's photo and title are listed  
+   * Each recipe's photo and title are listed 
+   * refesh button available to update the recipes  
 
 * Recipe Details
-   * The recipe's summary and instructions are listed for the user
+   * The recipe's summary, ingredients and instructions are provided 
    * By clicking the heart button, the button dings and the recipe has been saved
 
 * Favorites
    * List of your favorite recipes with associated name and photo 
 
 * Favorite Recipe Details
-   * Lists out the instructions for the fav recipe
+   * Lists out the ingredients and instructions for the fav recipe
 
 
 ### 2. Navigation
@@ -82,6 +84,7 @@ Press two keys simultaneously: CMD + R to run the app
    | Recipe name      | String   |  The name of the recipe |
    | Recipe Image     | String |  The image URL associated with relevant recipe|
    | Recipe Description | String | Brief summary of the food |
+   | Recipe Ingredients | String | Ingredients used for the recipe listed |
    | Recipe Instructions | String | List of instructions on how to prepare the dish |
  
  
