@@ -22,6 +22,12 @@
 		4BCD8262264B85F700EC1AD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD8261264B85F700EC1AD0 /* Extension.swift */; };
 		EE0CCC3A27D039E30074E71C /* favRecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CCC3927D039E30074E71C /* favRecipeDetailsViewController.swift */; };
 		EE95B8182A19CFC900FBDF5C /* cooking-pot.json in Resources */ = {isa = PBXBuildFile; fileRef = EE95B8172A19CFC800FBDF5C /* cooking-pot.json */; };
+		EE99FE9A2A2309CB00112E7C /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = EE99FE992A2309CB00112E7C /* loading.json */; };
+		EE99FE9C2A230C0500112E7C /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = EE99FE9B2A230C0500112E7C /* loader.json */; };
+		EE99FE9E2A24263200112E7C /* food-bowl.json in Resources */ = {isa = PBXBuildFile; fileRef = EE99FE9D2A24263200112E7C /* food-bowl.json */; };
+		EE99FEA02A24275B00112E7C /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = EE99FE9F2A24275B00112E7C /* heart.json */; };
+		EE99FEA22A24279400112E7C /* love.json in Resources */ = {isa = PBXBuildFile; fileRef = EE99FEA12A24279400112E7C /* love.json */; };
+		EE99FEA42A2427FA00112E7C /* pixelated-heart.json in Resources */ = {isa = PBXBuildFile; fileRef = EE99FEA32A2427FA00112E7C /* pixelated-heart.json */; };
 		EED257F227CAB83F00401296 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = EED257F127CAB83F00401296 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +51,12 @@
 		935399CA53FF81402554F26A /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		EE0CCC3927D039E30074E71C /* favRecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favRecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		EE95B8172A19CFC800FBDF5C /* cooking-pot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cooking-pot.json"; sourceTree = "<group>"; };
+		EE99FE992A2309CB00112E7C /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		EE99FE9B2A230C0500112E7C /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		EE99FE9D2A24263200112E7C /* food-bowl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "food-bowl.json"; sourceTree = "<group>"; };
+		EE99FE9F2A24275B00112E7C /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
+		EE99FEA12A24279400112E7C /* love.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = love.json; sourceTree = "<group>"; };
+		EE99FEA32A2427FA00112E7C /* pixelated-heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pixelated-heart.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,12 @@
 			isa = PBXGroup;
 			children = (
 				EE95B8172A19CFC800FBDF5C /* cooking-pot.json */,
+				EE99FE992A2309CB00112E7C /* loading.json */,
+				EE99FE9D2A24263200112E7C /* food-bowl.json */,
+				EE99FEA32A2427FA00112E7C /* pixelated-heart.json */,
+				EE99FEA12A24279400112E7C /* love.json */,
+				EE99FE9F2A24275B00112E7C /* heart.json */,
+				EE99FE9B2A230C0500112E7C /* loader.json */,
 				4B711F89264C84BA00008380 /* sounds */,
 				EE9DF77627CF2D5600846277 /* View Controllers */,
 				EE9DF77727CF2D8500846277 /* Custom Cells */,
@@ -199,9 +217,15 @@
 			files = (
 				4B711F8B264C84EF00008380 /* dingSound.mp3 in Resources */,
 				EE95B8182A19CFC900FBDF5C /* cooking-pot.json in Resources */,
+				EE99FE9A2A2309CB00112E7C /* loading.json in Resources */,
+				EE99FE9C2A230C0500112E7C /* loader.json in Resources */,
 				4B6C05652633D7F700D53F83 /* LaunchScreen.storyboard in Resources */,
+				EE99FEA02A24275B00112E7C /* heart.json in Resources */,
 				4B6C05622633D7F700D53F83 /* Assets.xcassets in Resources */,
+				EE99FEA42A2427FA00112E7C /* pixelated-heart.json in Resources */,
+				EE99FEA22A24279400112E7C /* love.json in Resources */,
 				4B6C055D2633D7F200D53F83 /* Main.storyboard in Resources */,
+				EE99FE9E2A24263200112E7C /* food-bowl.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    
     var recipeData = [[String: Any?]]() //array of dictionaries
     var filteredRecipeData = [[String:Any?]]()
   
@@ -42,14 +46,15 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                self.recipeData = dataDictionary["recipes"] as! [[String: Any]]
+                self.recipeData = dataDictionary["recipes"] as? [[String: Any]] ?? [["empty" : "oh no"]]
                 print("Recipes in dictionary!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 //api info downloaded
                 self.filteredRecipeData = self.recipeData.compactMap { $0 }
                 if self.tableView.numberOfRows(inSection: 0) != 0 {
                     self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
                 }
-                self.tableView.reloadData() //refresh data
+                self.tableView.reloadWithAnimation()
+ //refresh data
             }
         }
         task.resume()
@@ -60,10 +65,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     private func setupAnimation() {
         // 2. Start LottieAnimationView with animation name (without extension)
         
-        animationView.animation = Animation.named("cooking-pot")
+        animationView.animation = Animation.named("food-bowl")
+        
+        
 
         animationView.frame = view.bounds
-        
         animationView.backgroundColor = UIColor.black
         
 
@@ -79,6 +85,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         view.addSubview(animationView)
 
           // 6. Play animation
+        
+        
+        
 
         animationView.play(fromProgress: 0,
                                    toProgress: 1,
@@ -101,14 +110,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAnimation()
-        callAPI()
         tableView.dataSource = self
         tableView.delegate = self
+        callAPI()
+        setupAnimation()
+        
     }
+    
     
 @IBAction func onRefresh(_ sender: UIBarButtonItem) {
         // Refresh table view here
     callAPI()
+    setupAnimation()
+    
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
