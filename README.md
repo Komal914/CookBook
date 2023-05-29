@@ -149,10 +149,7 @@ drecipe.deleteInBackground() { (success, error) in
 ## Upcoming
 
 ### UI Updates and more functionality 
-* Search bar on random recipes screen to filter the feed
-* Add "Random" button to refresh the feed of recipes or implement pull refresh 
-* Lottie Animations -> [https://lottiefiles.com/](https://) 
-   * Increase app reactivity to user interaction 
+* Setting tab for the user to update their diet prefrences to filter recipes inside search
    
 
 
