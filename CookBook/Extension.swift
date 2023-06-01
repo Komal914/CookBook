@@ -41,6 +41,7 @@ func zoomIn(duration: TimeInterval = 0.3) {
 }
 }
 
+
 extension UITableView {
 
     func reloadWithAnimation() {
