@@ -63,47 +63,28 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     let animationView = AnimationView()
     
     private func setupAnimation() {
-        // 2. Start LottieAnimationView with animation name (without extension)
-        
+       // 2. Start LottieAnimationView with animation name (without extension)
         animationView.animation = Animation.named("food-bowl")
-        
-        
-
         animationView.frame = view.bounds
         animationView.backgroundColor = UIColor.black
-        
 
-          // 3. Set animation content mode
-
+        // 3. Set animation content mode
         animationView.contentMode = .scaleAspectFit
 
-
-          // 5. Adjust animation speed
-
+        // 5. Adjust animation speed
         animationView.animationSpeed = 1.8
-
         view.addSubview(animationView)
 
-          // 6. Play animation
-        
-        
-        
-
-        animationView.play(fromProgress: 0,
-                                   toProgress: 1,
-                                   loopMode: .playOnce,
-                                   completion: { (finished) in
-    
-                                    if finished {
-                                      print("Animation Complete")
-                                        self.animationView.removeFromSuperview()
-                                        
-                                    } else {
-                                      print("Animation cancelled")
-                                    }
-                })
-        
-        
+        // 6. Play animation
+        animationView.play(fromProgress: 0, toProgress: 1, loopMode: .playOnce, completion: {
+            (finished) in
+                if finished {
+                    print("Animation Complete")
+                    self.animationView.removeFromSuperview()
+                } else {
+                    print("Animation cancelled")
+                }
+        })
     }
     
 //MARK: VIEWDIDLOAD
@@ -129,7 +110,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         cell.alpha = 0
                 
-        UIView.animate(withDuration: 0.2, delay: 0.2*Double(indexPath.row),animations: {
+        UIView.animate(withDuration: 0.1, delay: 0.1*Double(indexPath.row),animations: {
             cell.alpha = 1
         })
         
